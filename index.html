@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#242820">
+  <meta name="description" content="Rodeos Honky-Tonk. Conocé a la banda, nuestras influencias y nuestro historial de presentaciones.">
+  <title>Rodeos · Honky-Tonk</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="contenido.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Rodeos Honky-Tonk — Inicio"><span class="wordmark">RODEOS<span>HONKY-TONK</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navegacion">Menú <span aria-hidden="true">☰</span></button>
+    <nav id="navegacion" aria-label="Navegación principal">
+      <a href="#sobre-rodeos">Sobre Rodeos</a><a href="#influencias">Nuestras influencias</a><a href="#presentaciones">Presentaciones</a><a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="contenido">
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="hero-art" id="hero-art" aria-hidden="true"><span class="hero-rings"></span><span class="large-star">✦</span></div>
+      <div class="hero-content">
+        <p class="eyebrow light">COUNTRY MUSIC · HONKY-TONK</p>
+        <h1 id="hero-title">RODEOS<span>HONKY-TONK</span></h1>
+        <p class="hero-line">Honky-tonk.<br><em>A nuestra manera.</em></p>
+        <a class="button cream" href="#sobre-rodeos">Conocé a la banda <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="photo-note" id="photo-note">PRIMER BOCETO <span>Foto de la banda por incorporar</span></p>
+      <a class="hero-bottom" href="#sobre-rodeos">La música sigue acá <span aria-hidden="true">↓</span></a>
+    </section>
+    <div class="ticker" aria-hidden="true"><span>RODEOS</span><b>✦</b><span>HONKY-TONK</span><b>✦</b><span>COUNTRY MUSIC</span><b>✦</b><span>RODEOS</span><b>✦</b><span>HONKY-TONK</span></div>
+    <section id="sobre-rodeos" class="section about">
+      <div class="section-label"><span>01 / LA BANDA</span><span aria-hidden="true">✦</span></div>
+      <div class="about-grid">
+        <h2>Sobre<br><em>Rodeos.</em></h2>
+        <div class="body-copy"><p class="lead" id="about-lead">Un punto de encuentro.<br>Una forma de hacer música.</p><div id="about-text"><p>Estamos preparando este espacio para compartir nuestra historia, presentar a los integrantes y contar qué nos reúne alrededor del honky-tonk.</p></div><a class="text-link" href="#influencias">De dónde viene el sonido <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <ul class="members" id="members" hidden aria-label="Integrantes"></ul>
+    </section>
+    <section id="influencias" class="section influences">
+      <div class="section-label"><span>02 / NUESTRAS RAÍCES</span><span aria-hidden="true">✦</span></div>
+      <div class="section-heading"><h2>Nuestras<br><em>influencias.</em></h2><p>Los discos, las canciones y los artistas<br>que nos traen hasta acá.</p></div>
+      <div id="influence-list" class="influence-list"><div class="influence-placeholder"><div class="record" aria-hidden="true"><span>RODEOS<br><small>SIDE A · 33 RPM</small></span></div><div><span class="eyebrow">EL LADO A DE RODEOS</span><h3>Todo empieza<br>por una canción.</h3><p>Próximamente, una selección de nuestras influencias y la historia detrás de cada una.</p></div></div></div>
+    </section>
+    <section id="presentaciones" class="section shows">
+      <div class="section-label"><span>03 / EN VIVO</span><span aria-hidden="true">✦</span></div>
+      <div class="section-heading"><h2>Nos vemos<br><em>en el escenario.</em></h2><p>Cada fecha, una historia.<br>Un recorrido por nuestras presentaciones.</p></div>
+      <div class="show-group"><h3>Próximas fechas <span aria-hidden="true">↗</span></h3><div id="upcoming"><p class="empty-state">Las próximas presentaciones se anunciarán acá.</p></div></div>
+      <div class="show-group"><div class="history-heading"><h3>Historial de presentaciones</h3><label id="year-filter-label" hidden>Filtrar por año <select id="year-filter"><option value="all">Todos los años</option></select></label></div><div id="history"><p class="empty-state">Estamos reuniendo las fechas, los lugares y los recuerdos de nuestros shows.</p></div></div>
+    </section>
+    <section id="contacto" class="section contact">
+      <div class="section-label"><span>04 / CONTACTO</span><span aria-hidden="true">✦</span></div>
+      <div class="contact-grid"><h2>¿Armamos<br><em>una fecha?</em></h2><div><p>Presentaciones, propuestas<br>o simplemente un saludo.</p><div id="contact-links"><p class="contact-pending">Pronto compartiremos nuestros canales de contacto.</p></div></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#inicio" aria-label="Rodeos — Volver al inicio"><span class="wordmark">RODEOS<span>HONKY-TONK</span></span></a><div id="social-links" class="social-links"><span class="pending-social">Redes y mail · próximamente</span></div><div class="footer-bottom"><p>© <span id="year">2026</span> Rodeos Honky-Tonk</p><a href="#inicio">Volver arriba ↑</a></div></footer>
+  <noscript><p class="noscript">Para ver los enlaces y las fechas actualizadas, activá JavaScript.</p></noscript>
+</body>
+</html>
