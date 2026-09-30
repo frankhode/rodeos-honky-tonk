@@ -12,5 +12,9 @@ window.RODEOS = {
   influencias: [], // { nombre: "Artista", texto: "Qué nos inspira de su música.", enlace: "https://..." }
   presentaciones: [], // { fecha: "2026-12-01", lugar: "Sala", ciudad: "Ciudad", enlace: "https://...", textoEnlace: "Entradas" }
   email: "Rodeoshonkytonk@gmail.com",
-  redes: [{ nombre: "Instagram", url: "https://www.instagram.com/rodeos.honkytonk/" }] // { nombre: "Instagram", url: "https://www.instagram.com/usuario/" }
+  redes: [
+    { nombre: "Instagram", url: "https://www.instagram.com/rodeos.honkytonk/" },
+    { nombre: "TikTok", url: "https://www.tiktok.com/@rodeos.honkytonk" },
+    { nombre: "YouTube", url: "https://www.youtube.com/@rodeoshonkytonk" }
+  ] // { nombre: "Instagram", url: "https://www.instagram.com/usuario/" }
 };
