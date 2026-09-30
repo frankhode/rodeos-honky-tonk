@@ -1,7 +1,7 @@
 // Editá este archivo para actualizar el sitio. No hace falta compilar nada.
 // Las comillas vacías y las listas vacías muestran mensajes de "próximamente".
 window.RODEOS = {
-  foto: "assets/banda.jpg", // Ejemplo: "assets/banda.jpg" (foto horizontal)
+  foto: "assets/banner-rodeos.jpg", // Ejemplo: "assets/banda.jpg" (foto horizontal)
   fotoAlt: "Rodeos Honky-Tonk",
   fotoPosicion: "center", // Ejemplo: "center 35%" para ajustar el recorte
   logo: "assets/logo.jpg", // Ejemplo: "assets/logo.png" (preferentemente fondo transparente)

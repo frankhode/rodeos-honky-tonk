@@ -14,3 +14,18 @@
 .brand img{width:140px;height:98px;object-position:center 38%}
 @media(max-width:800px) and (min-width:641px){.brand img{width:106px;height:74px}}
 @media(max-width:640px){.brand img{width:112px;height:78px}.footer-brand img{width:140px;height:98px}html{scroll-padding-top:100px}}
+
+/* Banner panorámico aprobado: foto íntegra y textos fuera de los músicos. */
+.hero{aspect-ratio:auto;min-height:0;display:flex;flex-direction:column}
+.hero-art{position:relative;inset:auto;aspect-ratio:1916/821;flex-shrink:0;order:0;width:100%}
+.hero-art:after{display:none}
+.hero-photo{display:block;width:100%;height:100%;object-fit:contain}
+.hero-content{order:1;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:18px 45px;padding:28px 7%;background:var(--ink)}
+.hero .eyebrow{grid-column:1;grid-row:1;font-size:9px}
+.hero h1{grid-column:1;grid-row:2;font-size:72px;margin:0}
+.hero h1 span{font-size:12px;letter-spacing:6px;margin:15px 0 0 2px}
+.hero-line{grid-column:2;grid-row:1 / 3;font-size:22px;margin:0}
+.hero .button{grid-column:3;grid-row:1 / 3;margin:0;align-self:center}
+.hero-bottom{position:relative;order:2;inset:auto;margin:0 7% 22px}
+@media(max-width:800px){.hero-content{gap:18px 25px;grid-template-columns:1fr auto}.hero h1{font-size:62px}.hero-line{grid-column:2;grid-row:1 / 3;font-size:20px}.hero .button{grid-column:1 / -1;grid-row:3;margin:0}}
+@media(max-width:640px){.hero-content{display:block;padding:25px 7%}.hero .hero-content{padding-bottom:25px}.hero h1{font-size:72px;margin:20px 0}.hero-line{margin-top:20px}.hero .button{margin-top:20px}}
