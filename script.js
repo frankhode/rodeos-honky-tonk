@@ -18,12 +18,12 @@
   }
   if (data.foto) {
     const img = new Image(); img.alt = data.fotoAlt || 'Rodeos Honky-Tonk'; img.className = 'hero-photo'; img.style.objectPosition = data.fotoPosicion || 'center'; img.fetchPriority = 'high';
-    img.onload = () => { q('#hero-art').replaceChildren(img); q('#hero-art').classList.add('has-photo'); q('#hero-art').removeAttribute('aria-hidden'); q('#photo-note').hidden = true; }; img.src = data.foto;
+    img.onload = () => { const heroArt = q('#hero-art'); if (heroArt) { heroArt.replaceChildren(img); heroArt.classList.add('has-photo'); heroArt.removeAttribute('aria-hidden'); } const photoNote = q('#photo-note'); if (photoNote) photoNote.hidden = true; }; img.src = data.foto;
   }
   if (data.logo) {
     const logo = new Image(); logo.onload = () => { document.querySelectorAll('.brand').forEach((b) => { const img = logo.cloneNode(); img.alt = 'Rodeos Honky-Tonk'; b.replaceChildren(img); }); }; logo.src = data.logo;
   }
-  if (data.lema) { const parts = data.lema.split('\n'); q('.hero-line').replaceChildren(document.createTextNode(parts[0])); if (parts.length > 1) q('.hero-line').append(document.createElement('br'), node('em', parts.slice(1).join(' '))); }
+  if (data.lema) { const heroLine = q('.hero-line'); if (heroLine) { const parts = data.lema.split('\n'); heroLine.replaceChildren(document.createTextNode(parts[0])); if (parts.length > 1) heroLine.append(document.createElement('br'), node('em', parts.slice(1).join(' '))); } }
   lines(q('#about-lead'), data.sobreTitulo);
   if (Array.isArray(data.sobre) && data.sobre.length) q('#about-text').replaceChildren(...data.sobre.map((p) => node('p', p)));
   if (Array.isArray(data.integrantes) && data.integrantes.length) { q('#members').hidden = false; q('#members').replaceChildren(...data.integrantes.map((m) => { const li = node('li'); li.append(node('strong', m.nombre), node('span', m.instrumento)); return li; })); }
