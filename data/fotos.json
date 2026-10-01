@@ -4,11 +4,9 @@
   "descripcion": "Arriba del escenario, cerca de la música.",
   "fotos": [
     {
-      "imagen": "assets/banda.jpg",
-      "titulo": "Rodeos en vivo",
-      "alt": "Los cinco músicos de Rodeos tocando sobre un escenario al aire libre",
-      "descripcion": "",
-      "credito": ""
+      "imagen": "/rodeos-honky-tonk/assets/banda.jpg",
+      "titulo": "San Pedro Country Music Festival 2026",
+      "alt": "San Pedro Country Music Festival 2026"
     }
   ]
 }
