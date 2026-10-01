@@ -1,35 +1,40 @@
 # Rodeos · Honky-Tonk
 
-Sitio estático, adaptable a celulares y listo para GitHub Pages. HTML, CSS y JavaScript; no necesita instalación, compilación ni base de datos.
+Sitio estático publicado en https://frankhode.github.io/rodeos-honky-tonk/.
 
-## Publicar
+## Editar sin tocar el diseño
 
-En el repositorio, abrir **Settings → Pages → Build and deployment**. Elegir **Deploy from a branch**, rama **main**, carpeta **/ (root)** y guardar. Una vez que termine el despliegue, el sitio estará en https://frankhode.github.io/rodeos-honky-tonk/.
+1. Entrar a https://app.pagescms.org e iniciar sesión con GitHub.
+2. Conectar la aplicación de Pages CMS y darle acceso al repositorio `frankhode/rodeos-honky-tonk`.
+3. Elegir ese repositorio y la rama `main`.
+4. Abrir el apartado que quieras editar, completar los campos y guardar.
 
-## Actualizar el contenido
+La configuración del panel está en `.pages.yml`. Los cambios se guardan en GitHub; GitHub Pages publica después de completar su despliegue. No es necesario cambiar de hosting. La conexión inicial de la cuenta debe realizarla su titular.
 
-Editar `contenido.js` desde GitHub con el lápiz y guardar los cambios. GitHub Pages actualizará el sitio automáticamente después de cada commit.
+### Fotos
 
-- `foto`: ruta de la foto horizontal de la banda, por ejemplo `assets/banda.jpg`. Subir el archivo con **Add file → Upload files**, dentro de `assets`.
-- `fotoPosicion`: posición del recorte del banner; por ejemplo `center 35%`.
-- `logo`: ruta del logo, por ejemplo `assets/logo.png`. Se muestra en cabecera y pie. Conviene un logo con fondo transparente, legible tanto sobre claro como sobre oscuro.
-- `sobreTitulo`, `sobre`, `integrantes`: presentación y formación.
-- `influencias`: artistas, textos y enlaces opcionales.
-- `presentaciones`: fecha ISO `AAAA-MM-DD`, lugar, ciudad y enlace opcional. El sitio separa próximas fechas e historial automáticamente usando la fecha de Argentina. El historial se ordena de más reciente a más antiguo y permite filtrar cuando hay varios años.
-- `email`, `redes`: enlaces de contacto y del pie.
+En **Fotos**, agregar una entrada por imagen. En **Foto**, subir o elegir un archivo. Completar título, descripción accesible y, si corresponde, epígrafe y crédito. Reordenar las entradas para cambiar su orden. Quitar una entrada la retira de la galería, sin necesidad de borrar el archivo original. Guardar al terminar.
 
-Ejemplo de formato para fechas (datos ficticios; reemplazar antes de usar):
+La primera foto ocupa el ancho de la galería; las siguientes se organizan en pares. En celular se apilan. Al tocar una foto se abre un visor con flechas, teclado (←/→, Escape) y deslizamiento táctil. Con una sola imagen no aparecen flechas. Sin imágenes, la sección se oculta. No hay reproducción automática ni cargas públicas de visitantes.
 
-```js
-presentaciones: [
-  { fecha: "2026-12-01", lugar: "Nombre de la sala", ciudad: "Ciudad", enlace: "https://ejemplo.com/entradas", textoEnlace: "Entradas ↗" }
-],
-```
+### Otros contenidos
 
-Los textos iniciales son provisionales: no se inventaron una biografía, músicos, influencias, fechas ni cuentas sociales. La cabecera y el pie incluyen el logo aportado y el banner incorpora la fotografía del grupo. Si falta una imagen, queda un respaldo tipográfico o gráfico. Los canales de contacto vacíos muestran un aviso; no hay enlaces ficticios ni un formulario que simule enviar mensajes.
+- **Logo y banner:** reemplazar imágenes manteniendo sus proporciones y el estilo.
+- **Sobre Rodeos:** introducción, párrafos e integrantes.
+- **Influencias:** agregar, quitar y reordenar artistas; mantener los créditos/licencias de las fotografías utilizadas.
+- **Presentaciones:** fechas `AAAA-MM-DD`, lugar, ciudad y enlace. Se dividen automáticamente en próximas fechas e historial según el día de Argentina.
+- **Videos:** pegar enlaces de YouTube o publicaciones/reels de Instagram. Se genera el reproductor y un enlace a la publicación original. La disponibilidad depende de la plataforma y de que el contenido permita inserción.
+- **Contacto y redes:** editar el mail y los enlaces del pie.
+- **Secciones adicionales:** agregar bloques de texto, foto con texto, galería o video. Aparecen antes de Contacto y tienen enlace en el menú. Los campos no aplicables al formato elegido se dejan vacíos.
 
-## Probar localmente
+Cada apartado dispone de **Mostrar sección**. Desactivarlo oculta esa sección y su enlace; ocultar Contacto no elimina las redes del pie. Para nuevas secciones, activar la casilla al crearlas.
 
-Abrir `index.html` directamente o, con Python instalado, ejecutar `python -m http.server 8000` dentro de esta carpeta y abrir http://localhost:8000.
+Los tamaños, colores y plantillas se ajustan globalmente en `styles.css` y `editorial.js`; no es necesario tocarlos para editar contenido.
 
-Las tipografías Barlow Condensed y DM Sans se cargan desde Google Fonts. Si no hay conexión se usan fuentes de respaldo. No se cargan reproductores, analítica ni redes sociales de terceros automáticamente.
+## Estructura y desarrollo
+
+`data/*.json` es la fuente del contenido editable. `contenido.js` conserva una copia de respaldo de la versión anterior, utilizada solamente si falla la carga de un archivo; no editarlo para actualizar el sitio. `script.js` carga los datos y `editorial.js` gestiona las plantillas y el visor. Se conservan los metadatos originales de las influencias.
+
+Para probar, ejecutar `python -m http.server 8000` en esta carpeta y abrir http://localhost:8000. Usar servidor HTTP: abrir el HTML como archivo local no permite cargar los JSON.
+
+Las tipografías se cargan desde Google Fonts. Los reproductores de YouTube e Instagram usan carga diferida. No hay compilación ni base de datos.

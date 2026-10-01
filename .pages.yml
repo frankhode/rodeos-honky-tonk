@@ -1,0 +1,442 @@
+{
+  "media": {
+    "input": "assets",
+    "output": "/rodeos-honky-tonk/assets",
+    "rename": "safe",
+    "extensions": [
+      "jpg",
+      "jpeg",
+      "png",
+      "webp",
+      "avif",
+      "svg"
+    ]
+  },
+  "content": [
+    {
+      "name": "general",
+      "label": "Logo y banner",
+      "type": "file",
+      "path": "data/general.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "logo",
+          "label": "Logotipo",
+          "type": "image"
+        },
+        {
+          "name": "foto",
+          "label": "Banner",
+          "type": "image"
+        },
+        {
+          "name": "fotoAlt",
+          "label": "Descripción del banner",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "sobre",
+      "label": "Sobre Rodeos",
+      "type": "file",
+      "path": "data/sobre.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "visible",
+          "label": "Mostrar sección",
+          "type": "boolean"
+        },
+        {
+          "name": "sobreTitulo",
+          "label": "Introducción",
+          "type": "text"
+        },
+        {
+          "name": "sobre",
+          "label": "Párrafos",
+          "type": "text",
+          "list": true
+        },
+        {
+          "name": "integrantes",
+          "label": "Integrantes",
+          "type": "object",
+          "fields": [
+            {
+              "name": "nombre",
+              "label": "Nombre",
+              "type": "string"
+            },
+            {
+              "name": "instrumento",
+              "label": "Instrumento",
+              "type": "string"
+            }
+          ],
+          "list": true
+        }
+      ]
+    },
+    {
+      "name": "influencias",
+      "label": "Influencias",
+      "type": "file",
+      "path": "data/influencias.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "visible",
+          "label": "Mostrar sección",
+          "type": "boolean"
+        },
+        {
+          "name": "influencias",
+          "label": "Artistas",
+          "type": "object",
+          "fields": [
+            {
+              "name": "nombre",
+              "label": "Nombre",
+              "type": "string"
+            },
+            {
+              "name": "imagen",
+              "label": "Foto",
+              "type": "image"
+            },
+            {
+              "name": "enlace",
+              "label": "Enlace para escuchar",
+              "type": "string"
+            },
+            {
+              "name": "canciones",
+              "label": "Canciones",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "acompanantes",
+              "label": "Acompañantes",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "fuenteFoto",
+              "label": "Fuente de la foto",
+              "type": "string"
+            },
+            {
+              "name": "paginaFoto",
+              "label": "Página original",
+              "type": "string"
+            },
+            {
+              "name": "creditoFoto",
+              "label": "Crédito y licencia",
+              "type": "text"
+            },
+            {
+              "name": "fotoNota",
+              "label": "Nota de la foto",
+              "type": "string"
+            },
+            {
+              "name": "creditoTexto",
+              "label": "Autor y licencia (texto)",
+              "type": "text"
+            }
+          ],
+          "list": true
+        }
+      ]
+    },
+    {
+      "name": "presentaciones",
+      "label": "Presentaciones",
+      "type": "file",
+      "path": "data/presentaciones.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "visible",
+          "label": "Mostrar sección",
+          "type": "boolean"
+        },
+        {
+          "name": "presentaciones",
+          "label": "Fechas",
+          "type": "object",
+          "fields": [
+            {
+              "name": "fecha",
+              "label": "Fecha (AAAA-MM-DD)",
+              "type": "string",
+              "required": true,
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "name": "lugar",
+              "label": "Lugar",
+              "type": "string"
+            },
+            {
+              "name": "ciudad",
+              "label": "Ciudad",
+              "type": "string"
+            },
+            {
+              "name": "enlace",
+              "label": "Entradas o más información",
+              "type": "string"
+            },
+            {
+              "name": "textoEnlace",
+              "label": "Texto del enlace",
+              "type": "string"
+            }
+          ],
+          "list": true
+        }
+      ]
+    },
+    {
+      "name": "videos",
+      "label": "Videos",
+      "type": "file",
+      "path": "data/videos.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "visible",
+          "label": "Mostrar sección",
+          "type": "boolean"
+        },
+        {
+          "name": "videos",
+          "label": "Videos y publicaciones",
+          "type": "object",
+          "fields": [
+            {
+              "name": "titulo",
+              "label": "Título",
+              "type": "string"
+            },
+            {
+              "name": "url",
+              "label": "Enlace de YouTube o Instagram",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "list": true
+        }
+      ]
+    },
+    {
+      "name": "fotos",
+      "label": "Fotos",
+      "type": "file",
+      "path": "data/fotos.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "visible",
+          "label": "Mostrar sección",
+          "type": "boolean"
+        },
+        {
+          "name": "titulo",
+          "label": "Título",
+          "type": "string"
+        },
+        {
+          "name": "descripcion",
+          "label": "Introducción",
+          "type": "text"
+        },
+        {
+          "name": "fotos",
+          "label": "Fotos — ordenalas como quieras",
+          "type": "object",
+          "fields": [
+            {
+              "name": "imagen",
+              "label": "Foto",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "titulo",
+              "label": "Título",
+              "type": "string"
+            },
+            {
+              "name": "alt",
+              "label": "Descripción de la imagen (accesibilidad)",
+              "type": "string"
+            },
+            {
+              "name": "descripcion",
+              "label": "Epígrafe",
+              "type": "text"
+            },
+            {
+              "name": "credito",
+              "label": "Crédito de la foto",
+              "type": "string"
+            }
+          ],
+          "list": true
+        }
+      ]
+    },
+    {
+      "name": "contacto",
+      "label": "Contacto y redes",
+      "type": "file",
+      "path": "data/contacto.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "visible",
+          "label": "Mostrar sección",
+          "type": "boolean"
+        },
+        {
+          "name": "email",
+          "label": "Mail",
+          "type": "string"
+        },
+        {
+          "name": "redes",
+          "label": "Redes sociales",
+          "type": "object",
+          "fields": [
+            {
+              "name": "nombre",
+              "label": "Nombre",
+              "type": "string"
+            },
+            {
+              "name": "url",
+              "label": "Enlace",
+              "type": "string"
+            }
+          ],
+          "list": true
+        }
+      ]
+    },
+    {
+      "name": "secciones",
+      "label": "Secciones adicionales",
+      "type": "file",
+      "path": "data/secciones.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "secciones",
+          "label": "Nuevas secciones",
+          "type": "object",
+          "fields": [
+            {
+              "name": "visible",
+              "label": "Mostrar sección",
+              "type": "boolean"
+            },
+            {
+              "name": "titulo",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "tipo",
+              "label": "Formato",
+              "type": "select",
+              "options": {
+                "values": [
+                  {
+                    "label": "Texto",
+                    "name": "texto"
+                  },
+                  {
+                    "label": "Foto y texto",
+                    "name": "imagen"
+                  },
+                  {
+                    "label": "Galería",
+                    "name": "galeria"
+                  },
+                  {
+                    "label": "Video",
+                    "name": "video"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "texto",
+              "label": "Texto",
+              "type": "text"
+            },
+            {
+              "name": "imagen",
+              "label": "Imagen",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Descripción de la imagen",
+              "type": "string"
+            },
+            {
+              "name": "url",
+              "label": "Enlace del video",
+              "type": "string"
+            },
+            {
+              "name": "fotos",
+              "label": "Fotos de la galería",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "imagen",
+                  "label": "Foto",
+                  "type": "image",
+                  "required": true
+                },
+                {
+                  "name": "titulo",
+                  "label": "Título",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Descripción de la imagen (accesibilidad)",
+                  "type": "string"
+                },
+                {
+                  "name": "descripcion",
+                  "label": "Epígrafe",
+                  "type": "text"
+                },
+                {
+                  "name": "credito",
+                  "label": "Crédito de la foto",
+                  "type": "string"
+                }
+              ],
+              "list": true
+            }
+          ],
+          "list": true
+        }
+      ]
+    }
+  ]
+}

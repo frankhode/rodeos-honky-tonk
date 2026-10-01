@@ -1,7 +1,16 @@
-(() => {
+(async () => {
   'use strict';
   document.documentElement.classList.add('js');
-  const data = window.RODEOS || {};
+  const data = { ...(window.RODEOS || {}) };
+  const content = {};
+  await Promise.all(['general','sobre','influencias','presentaciones','videos','fotos','contacto','secciones'].map(async name => {
+    try {
+      const response = await fetch('data/' + name + '.json', {cache:'no-cache', signal:AbortSignal.timeout(10000)});
+      if (!response.ok) throw new Error(response.status);
+      content[name] = await response.json();
+      const {visible, ...values} = content[name]; Object.assign(data, values);
+    } catch (error) { console.warn('No se pudo cargar la sección ' + name, error); }
+  }));
   const q = (s) => document.querySelector(s);
   const node = (tag, text, className) => { const n = document.createElement(tag); if (text) n.textContent = text; if (className) n.className = className; return n; };
   const safeURL = (value) => { try { const url = new URL(value); return ['https:', 'http:'].includes(url.protocol) ? url.href : null; } catch { return null; } };
@@ -25,9 +34,9 @@
   }
   if (data.lema) { const heroLine = q('.hero-line'); if (heroLine) { const parts = data.lema.split('\n'); heroLine.replaceChildren(document.createTextNode(parts[0])); if (parts.length > 1) heroLine.append(document.createElement('br'), node('em', parts.slice(1).join(' '))); } }
   lines(q('#about-lead'), data.sobreTitulo);
-  if (Array.isArray(data.sobre) && data.sobre.length) q('#about-text').replaceChildren(...data.sobre.map((p) => node('p', p)));
+  if (Array.isArray(data.sobre)) q('#about-text').replaceChildren(...data.sobre.map((p) => node('p', p)));
   if (Array.isArray(data.integrantes) && data.integrantes.length) { q('#members').hidden = false; q('#members').replaceChildren(...data.integrantes.map((m) => { const li = node('li'); li.append(node('strong', m.nombre), node('span', m.instrumento)); return li; })); }
-  if (Array.isArray(data.influencias) && data.influencias.length) {
+  if (Array.isArray(data.influencias)) {
     const list = q('#influence-list');
     list.classList.toggle('artist-collage', data.influencias.some((item) => item.imagen));
     list.replaceChildren(...data.influencias.map((item, i) => {
@@ -72,6 +81,8 @@
   if (validEmail) { const a = node('a', email + ' ↗', 'contact-email'); a.href = 'mailto:' + email; q('#contact-links').replaceChildren(a); const footerMail = node('a', 'Mail ↗'); footerMail.href = a.href; footerLinks.push(footerMail); }
   else if (socials.length) { const a = link('Escribinos por ' + socials[0].nombre + ' ↗', safeURL(socials[0].url)); a.className = 'contact-email'; q('#contact-links').replaceChildren(a); }
   if (footerLinks.length) q('#social-links').replaceChildren(...footerLinks);
+  window.renderEditableSections({data,content,node,link,safeURL});
   q('#year').textContent = new Intl.DateTimeFormat('en', { year: 'numeric', timeZone: 'America/Argentina/Buenos_Aires' }).format(new Date());
 })();
+
 

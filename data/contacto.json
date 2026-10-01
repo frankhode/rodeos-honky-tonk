@@ -1,0 +1,18 @@
+{
+  "visible": true,
+  "email": "Rodeoshonkytonk@gmail.com",
+  "redes": [
+    {
+      "nombre": "Instagram",
+      "url": "https://www.instagram.com/rodeos.honkytonk/"
+    },
+    {
+      "nombre": "TikTok",
+      "url": "https://www.tiktok.com/@rodeos.honkytonk"
+    },
+    {
+      "nombre": "YouTube",
+      "url": "https://www.youtube.com/@rodeoshonkytonk"
+    }
+  ]
+}

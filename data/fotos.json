@@ -1,0 +1,14 @@
+{
+  "visible": true,
+  "titulo": "Rodeos en fotos.",
+  "descripcion": "Arriba del escenario, cerca de la música.",
+  "fotos": [
+    {
+      "imagen": "assets/banda.jpg",
+      "titulo": "Rodeos en vivo",
+      "alt": "Los cinco músicos de Rodeos tocando sobre un escenario al aire libre",
+      "descripcion": "",
+      "credito": ""
+    }
+  ]
+}
