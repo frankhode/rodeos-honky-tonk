@@ -6,7 +6,7 @@
   "mostrarEnMenu": true,
   "etiqueta": "FOTOS",
   "mostrarEtiqueta": false,
-  "mostrarDescripcion": true,
+  "mostrarDescripcion": false,
   "fotos": [
     {
       "visible": true,
