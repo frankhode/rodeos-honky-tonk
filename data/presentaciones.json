@@ -4,8 +4,8 @@
   "mostrarTitulo": false,
   "menu": "Presentaciones",
   "mostrarEnMenu": true,
-  "etiqueta": "EN VIVO",
-  "mostrarEtiqueta": false,
+  "etiqueta": "Presentaciones",
+  "mostrarEtiqueta": true,
   "mostrarDescripcion": false,
   "presentaciones": [
     {
