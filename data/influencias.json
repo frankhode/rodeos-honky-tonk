@@ -1,12 +1,12 @@
 {
   "visible": true,
   "titulo": "Nuestras influencias.",
-  "mostrarTitulo": true,
+  "mostrarTitulo": false,
   "menu": "Influencias",
   "mostrarEnMenu": true,
-  "etiqueta": "NUESTRAS RAÍCES",
+  "etiqueta": "Nuestras influencias",
   "mostrarEtiqueta": true,
-  "mostrarDescripcion": true,
+  "mostrarDescripcion": false,
   "influencias": [
     {
       "visible": true,
