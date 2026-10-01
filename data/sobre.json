@@ -1,50 +1,48 @@
 {
-  "visible": true,
+  "visible": false,
+  "titulo": "Sobre\nRodeos.",
+  "mostrarTitulo": true,
+  "menu": "Sobre Rodeos",
+  "mostrarEnMenu": true,
+  "etiqueta": "LA BANDA",
+  "mostrarEtiqueta": true,
+  "mostrarDescripcion": true,
   "sobreTitulo": "Rodeos es una banda de country vintage que revive el sonido del Honky Tonk clásico de fines de los años 40. El quinteto se formó a fines de 2024, reuniendo músicos con trayectorias en el country, blues, rockabilly y bluegrass.\nCon instrumentos y arreglos fieles a la época, Rodeos busca rescatar el espíritu del country previo a 1955, cuando el género aún no había sido transformado por el rock. Inspirados por Hank Williams o Bob Wills, Rodeos hacemos subgéneros como honky-tonk, western swing y rockabilly.\nRodeos tiene un historial de más de 40 presentaciones en vivo como artista principal o invitado en conciertos, festivales, eventos y fiestas privadas\n",
   "integrantes": [
     {
+      "visible": true,
       "nombre": "Valentín Palenque",
       "instrumento": "guitarra acústica, voz líder",
-      "visible": true,
       "mostrarInstrumento": true
     },
     {
+      "visible": true,
       "nombre": "Freight Fer",
       "instrumento": "guitarra eléctrica, voz",
-      "visible": true,
       "mostrarInstrumento": true
     },
     {
+      "visible": true,
       "nombre": "Franco Martino",
       "instrumento": "lap steel, voz",
-      "visible": true,
       "mostrarInstrumento": true
     },
     {
+      "visible": true,
       "nombre": "Tomi Picchinino",
       "instrumento": "violín, voz",
-      "visible": true,
       "mostrarInstrumento": true
     },
     {
+      "visible": true,
       "nombre": "Francisco Ortiz",
       "instrumento": "contrabajo, voz",
-      "visible": true,
       "mostrarInstrumento": true
     }
   ],
-  "titulo": "Sobre\nRodeos.",
-  "menu": "Sobre Rodeos",
-  "etiqueta": "LA BANDA",
-  "descripcion": "",
-  "mostrarTitulo": true,
-  "mostrarEnMenu": true,
-  "mostrarEtiqueta": true,
-  "mostrarDescripcion": true,
   "mostrarIntroduccion": true,
   "mostrarParrafos": true,
   "mostrarIntegrantes": true,
   "mostrarEnlace": false,
-  "sobre": [],
   "textoEnlace": "Influencias"
 }
