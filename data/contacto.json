@@ -1,10 +1,10 @@
 {
   "visible": true,
   "titulo": "Contacto",
-  "mostrarTitulo": true,
+  "mostrarTitulo": false,
   "menu": "Contacto",
   "mostrarEnMenu": true,
-  "etiqueta": "CONTACTO",
+  "etiqueta": "Contacto",
   "mostrarEtiqueta": true,
   "mostrarDescripcion": true,
   "email": "rodeoshonkytonk@gmail.com",
