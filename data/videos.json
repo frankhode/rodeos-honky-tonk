@@ -4,8 +4,8 @@
   "mostrarTitulo": false,
   "menu": "Videos",
   "mostrarEnMenu": true,
-  "etiqueta": "VIDEOS",
-  "mostrarEtiqueta": false,
+  "etiqueta": "Videos",
+  "mostrarEtiqueta": true,
   "mostrarDescripcion": false,
   "videos": [
     {
