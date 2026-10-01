@@ -4,8 +4,8 @@
   "mostrarTitulo": false,
   "menu": "Fotos",
   "mostrarEnMenu": true,
-  "etiqueta": "FOTOS",
-  "mostrarEtiqueta": false,
+  "etiqueta": "Fotos",
+  "mostrarEtiqueta": true,
   "mostrarDescripcion": false,
   "fotos": [
     {
