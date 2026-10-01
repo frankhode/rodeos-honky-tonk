@@ -1,5 +1,20 @@
 {
   "logo": "assets/logo-transparent.svg",
   "foto": "assets/banner-rodeos.jpg",
-  "fotoAlt": "Rodeos Honky-Tonk"
+  "fotoAlt": "Rodeos Honky-Tonk",
+  "mostrarLogo": true,
+  "mostrarMenu": true,
+  "mostrarBanner": true,
+  "mostrarFranja": true,
+  "mostrarPie": true,
+  "mostrarLogoPie": true,
+  "mostrarRedesPie": true,
+  "mostrarCopyright": true,
+  "mostrarVolver": true,
+  "franjaTexto": [
+    "HONKY-TONK",
+    "WESTERN SWING",
+    "HONKY-TONK",
+    "WESTERN SWING"
+  ]
 }

@@ -38,3 +38,16 @@ Los tamaños, colores y plantillas se ajustan globalmente en `styles.css` y `edi
 Para probar, ejecutar `python -m http.server 8000` en esta carpeta y abrir http://localhost:8000. Usar servidor HTTP: abrir el HTML como archivo local no permite cargar los JSON.
 
 Las tipografías se cargan desde Google Fonts. Los reproductores de YouTube e Instagram usan carga diferida. No hay compilación ni base de datos.
+
+
+## Menú lateral y controles de visibilidad
+
+En pantallas de más de 1100 píxeles, el menú queda fijo a la izquierda. En pantallas menores se conserva el menú superior desplegable.
+
+Cada sección permite editar **Título**, **Nombre en el menú**, **Rótulo superior** y **Texto de acompañamiento**, con interruptores independientes. Un salto de línea en un título deja la segunda línea en cursiva/color. Vaciar un texto lo quita: no se recupera texto genérico de respaldo.
+
+Los controles **Mostrar…** conservan el contenido cuando está oculto. También se puede ocultar una foto, artista, integrante, fecha, video o red individualmente. Las galerías omiten las fotos ocultas tanto en miniaturas como en el visor.
+
+En **Cabecera, franja y pie** se controlan logo, navegación, banner, franja roja y componentes del pie. Los textos de la franja se pueden editar. Las próximas fechas y el historial se ocultan automáticamente cuando están vacíos.
+
+Luego de actualizar la configuración, recargar Pages CMS para que aparezcan los nuevos campos. Las nuevas entradas tienen controles propios: activar los elementos que se quieran mostrar.

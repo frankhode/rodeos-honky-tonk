@@ -15,7 +15,7 @@
   "content": [
     {
       "name": "general",
-      "label": "Logo y banner",
+      "label": "Cabecera, franja y pie",
       "type": "file",
       "path": "data/general.json",
       "format": "json",
@@ -34,6 +34,57 @@
           "name": "fotoAlt",
           "label": "Descripción del banner",
           "type": "string"
+        },
+        {
+          "name": "mostrarLogo",
+          "label": "Mostrar logo del menú",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarMenu",
+          "label": "Mostrar navegación",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarBanner",
+          "label": "Mostrar banner",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarFranja",
+          "label": "Mostrar franja roja",
+          "type": "boolean"
+        },
+        {
+          "name": "franjaTexto",
+          "label": "Textos de la franja",
+          "type": "string",
+          "list": true
+        },
+        {
+          "name": "mostrarPie",
+          "label": "Mostrar pie de página",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarLogoPie",
+          "label": "Mostrar logo del pie",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarRedesPie",
+          "label": "Mostrar redes y mail del pie",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarCopyright",
+          "label": "Mostrar copyright",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarVolver",
+          "label": "Mostrar Volver arriba",
+          "type": "boolean"
         }
       ]
     },
@@ -50,6 +101,46 @@
           "type": "boolean"
         },
         {
+          "name": "titulo",
+          "label": "Título de la sección (segunda línea en color)",
+          "type": "text"
+        },
+        {
+          "name": "mostrarTitulo",
+          "label": "Mostrar título",
+          "type": "boolean"
+        },
+        {
+          "name": "menu",
+          "label": "Nombre en el menú",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEnMenu",
+          "label": "Mostrar en el menú",
+          "type": "boolean"
+        },
+        {
+          "name": "etiqueta",
+          "label": "Rótulo superior",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEtiqueta",
+          "label": "Mostrar rótulo superior",
+          "type": "boolean"
+        },
+        {
+          "name": "descripcion",
+          "label": "Texto de acompañamiento",
+          "type": "text"
+        },
+        {
+          "name": "mostrarDescripcion",
+          "label": "Mostrar texto de acompañamiento",
+          "type": "boolean"
+        },
+        {
           "name": "sobreTitulo",
           "label": "Introducción",
           "type": "text"
@@ -57,14 +148,31 @@
         {
           "name": "sobre",
           "label": "Párrafos",
-          "type": "text",
-          "list": true
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "visible",
+              "label": "Mostrar párrafo",
+              "type": "boolean"
+            },
+            {
+              "name": "texto",
+              "label": "Texto",
+              "type": "text"
+            }
+          ]
         },
         {
           "name": "integrantes",
           "label": "Integrantes",
           "type": "object",
           "fields": [
+            {
+              "name": "visible",
+              "label": "Mostrar esta entrada",
+              "type": "boolean"
+            },
             {
               "name": "nombre",
               "label": "Nombre",
@@ -74,9 +182,39 @@
               "name": "instrumento",
               "label": "Instrumento",
               "type": "string"
+            },
+            {
+              "name": "mostrarInstrumento",
+              "label": "Mostrar instrumento",
+              "type": "boolean"
             }
           ],
           "list": true
+        },
+        {
+          "name": "mostrarIntroduccion",
+          "label": "Mostrar introducción",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarParrafos",
+          "label": "Mostrar párrafos",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarIntegrantes",
+          "label": "Mostrar integrantes",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarEnlace",
+          "label": "Mostrar enlace a Influencias",
+          "type": "boolean"
+        },
+        {
+          "name": "textoEnlace",
+          "label": "Texto del enlace",
+          "type": "string"
         }
       ]
     },
@@ -93,10 +231,55 @@
           "type": "boolean"
         },
         {
+          "name": "titulo",
+          "label": "Título de la sección (segunda línea en color)",
+          "type": "text"
+        },
+        {
+          "name": "mostrarTitulo",
+          "label": "Mostrar título",
+          "type": "boolean"
+        },
+        {
+          "name": "menu",
+          "label": "Nombre en el menú",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEnMenu",
+          "label": "Mostrar en el menú",
+          "type": "boolean"
+        },
+        {
+          "name": "etiqueta",
+          "label": "Rótulo superior",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEtiqueta",
+          "label": "Mostrar rótulo superior",
+          "type": "boolean"
+        },
+        {
+          "name": "descripcion",
+          "label": "Texto de acompañamiento",
+          "type": "text"
+        },
+        {
+          "name": "mostrarDescripcion",
+          "label": "Mostrar texto de acompañamiento",
+          "type": "boolean"
+        },
+        {
           "name": "influencias",
           "label": "Artistas",
           "type": "object",
           "fields": [
+            {
+              "name": "visible",
+              "label": "Mostrar esta entrada",
+              "type": "boolean"
+            },
             {
               "name": "nombre",
               "label": "Nombre",
@@ -148,9 +331,44 @@
               "name": "creditoTexto",
               "label": "Autor y licencia (texto)",
               "type": "text"
+            },
+            {
+              "name": "mostrarImagen",
+              "label": "Mostrar retrato",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarNombre",
+              "label": "Mostrar nombre",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarEnlace",
+              "label": "Activar enlace del artista",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarNota",
+              "label": "Mostrar nota",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarAcompanantes",
+              "label": "Mostrar acompañantes",
+              "type": "boolean"
             }
           ],
           "list": true
+        },
+        {
+          "name": "mostrarArtistas",
+          "label": "Mostrar artistas",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarCreditos",
+          "label": "Mostrar créditos de fotos",
+          "type": "boolean"
         }
       ]
     },
@@ -167,10 +385,55 @@
           "type": "boolean"
         },
         {
+          "name": "titulo",
+          "label": "Título de la sección (segunda línea en color)",
+          "type": "text"
+        },
+        {
+          "name": "mostrarTitulo",
+          "label": "Mostrar título",
+          "type": "boolean"
+        },
+        {
+          "name": "menu",
+          "label": "Nombre en el menú",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEnMenu",
+          "label": "Mostrar en el menú",
+          "type": "boolean"
+        },
+        {
+          "name": "etiqueta",
+          "label": "Rótulo superior",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEtiqueta",
+          "label": "Mostrar rótulo superior",
+          "type": "boolean"
+        },
+        {
+          "name": "descripcion",
+          "label": "Texto de acompañamiento",
+          "type": "text"
+        },
+        {
+          "name": "mostrarDescripcion",
+          "label": "Mostrar texto de acompañamiento",
+          "type": "boolean"
+        },
+        {
           "name": "presentaciones",
           "label": "Fechas",
           "type": "object",
           "fields": [
+            {
+              "name": "visible",
+              "label": "Mostrar esta entrada",
+              "type": "boolean"
+            },
             {
               "name": "fecha",
               "label": "Fecha (AAAA-MM-DD)",
@@ -197,9 +460,64 @@
               "name": "textoEnlace",
               "label": "Texto del enlace",
               "type": "string"
+            },
+            {
+              "name": "mostrarFecha",
+              "label": "Mostrar fecha",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarLugar",
+              "label": "Mostrar lugar",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarCiudad",
+              "label": "Mostrar ciudad",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarEnlace",
+              "label": "Mostrar enlace",
+              "type": "boolean"
             }
           ],
           "list": true
+        },
+        {
+          "name": "mostrarProximas",
+          "label": "Mostrar próximas fechas",
+          "type": "boolean"
+        },
+        {
+          "name": "tituloProximas",
+          "label": "Título de próximas fechas",
+          "type": "string"
+        },
+        {
+          "name": "mostrarTituloProximas",
+          "label": "Mostrar título de próximas fechas",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarHistorial",
+          "label": "Mostrar historial",
+          "type": "boolean"
+        },
+        {
+          "name": "tituloHistorial",
+          "label": "Título del historial",
+          "type": "string"
+        },
+        {
+          "name": "mostrarTituloHistorial",
+          "label": "Mostrar título del historial",
+          "type": "boolean"
+        },
+        {
+          "name": "mostrarFiltro",
+          "label": "Mostrar filtro por año",
+          "type": "boolean"
         }
       ]
     },
@@ -216,10 +534,55 @@
           "type": "boolean"
         },
         {
+          "name": "titulo",
+          "label": "Título de la sección (segunda línea en color)",
+          "type": "text"
+        },
+        {
+          "name": "mostrarTitulo",
+          "label": "Mostrar título",
+          "type": "boolean"
+        },
+        {
+          "name": "menu",
+          "label": "Nombre en el menú",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEnMenu",
+          "label": "Mostrar en el menú",
+          "type": "boolean"
+        },
+        {
+          "name": "etiqueta",
+          "label": "Rótulo superior",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEtiqueta",
+          "label": "Mostrar rótulo superior",
+          "type": "boolean"
+        },
+        {
+          "name": "descripcion",
+          "label": "Texto de acompañamiento",
+          "type": "text"
+        },
+        {
+          "name": "mostrarDescripcion",
+          "label": "Mostrar texto de acompañamiento",
+          "type": "boolean"
+        },
+        {
           "name": "videos",
           "label": "Videos y publicaciones",
           "type": "object",
           "fields": [
+            {
+              "name": "visible",
+              "label": "Mostrar esta entrada",
+              "type": "boolean"
+            },
             {
               "name": "titulo",
               "label": "Título",
@@ -230,9 +593,29 @@
               "label": "Enlace de YouTube o Instagram",
               "type": "string",
               "required": true
+            },
+            {
+              "name": "mostrarTitulo",
+              "label": "Mostrar título de esta entrada",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarReproductor",
+              "label": "Mostrar reproductor",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarEnlace",
+              "label": "Mostrar enlace original",
+              "type": "boolean"
             }
           ],
           "list": true
+        },
+        {
+          "name": "mostrarVideos",
+          "label": "Mostrar videos y publicaciones",
+          "type": "boolean"
         }
       ]
     },
@@ -250,19 +633,54 @@
         },
         {
           "name": "titulo",
-          "label": "Título",
+          "label": "Título de la sección (segunda línea en color)",
+          "type": "text"
+        },
+        {
+          "name": "mostrarTitulo",
+          "label": "Mostrar título",
+          "type": "boolean"
+        },
+        {
+          "name": "menu",
+          "label": "Nombre en el menú",
           "type": "string"
         },
         {
+          "name": "mostrarEnMenu",
+          "label": "Mostrar en el menú",
+          "type": "boolean"
+        },
+        {
+          "name": "etiqueta",
+          "label": "Rótulo superior",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEtiqueta",
+          "label": "Mostrar rótulo superior",
+          "type": "boolean"
+        },
+        {
           "name": "descripcion",
-          "label": "Introducción",
+          "label": "Texto de acompañamiento",
           "type": "text"
+        },
+        {
+          "name": "mostrarDescripcion",
+          "label": "Mostrar texto de acompañamiento",
+          "type": "boolean"
         },
         {
           "name": "fotos",
           "label": "Fotos — ordenalas como quieras",
           "type": "object",
           "fields": [
+            {
+              "name": "visible",
+              "label": "Mostrar esta entrada",
+              "type": "boolean"
+            },
             {
               "name": "imagen",
               "label": "Foto",
@@ -288,9 +706,29 @@
               "name": "credito",
               "label": "Crédito de la foto",
               "type": "string"
+            },
+            {
+              "name": "mostrarTitulo",
+              "label": "Mostrar título de esta entrada",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarDescripcion",
+              "label": "Mostrar epígrafe",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarCredito",
+              "label": "Mostrar crédito",
+              "type": "boolean"
             }
           ],
           "list": true
+        },
+        {
+          "name": "mostrarFotos",
+          "label": "Mostrar galería",
+          "type": "boolean"
         }
       ]
     },
@@ -307,6 +745,46 @@
           "type": "boolean"
         },
         {
+          "name": "titulo",
+          "label": "Título de la sección (segunda línea en color)",
+          "type": "text"
+        },
+        {
+          "name": "mostrarTitulo",
+          "label": "Mostrar título",
+          "type": "boolean"
+        },
+        {
+          "name": "menu",
+          "label": "Nombre en el menú",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEnMenu",
+          "label": "Mostrar en el menú",
+          "type": "boolean"
+        },
+        {
+          "name": "etiqueta",
+          "label": "Rótulo superior",
+          "type": "string"
+        },
+        {
+          "name": "mostrarEtiqueta",
+          "label": "Mostrar rótulo superior",
+          "type": "boolean"
+        },
+        {
+          "name": "descripcion",
+          "label": "Texto de acompañamiento",
+          "type": "text"
+        },
+        {
+          "name": "mostrarDescripcion",
+          "label": "Mostrar texto de acompañamiento",
+          "type": "boolean"
+        },
+        {
           "name": "email",
           "label": "Mail",
           "type": "string"
@@ -316,6 +794,11 @@
           "label": "Redes sociales",
           "type": "object",
           "fields": [
+            {
+              "name": "visible",
+              "label": "Mostrar esta entrada",
+              "type": "boolean"
+            },
             {
               "name": "nombre",
               "label": "Nombre",
@@ -328,6 +811,11 @@
             }
           ],
           "list": true
+        },
+        {
+          "name": "mostrarEmail",
+          "label": "Mostrar mail en Contacto",
+          "type": "boolean"
         }
       ]
     },
@@ -405,6 +893,11 @@
               "type": "object",
               "fields": [
                 {
+                  "name": "visible",
+                  "label": "Mostrar esta entrada",
+                  "type": "boolean"
+                },
+                {
                   "name": "imagen",
                   "label": "Foto",
                   "type": "image",
@@ -429,9 +922,79 @@
                   "name": "credito",
                   "label": "Crédito de la foto",
                   "type": "string"
+                },
+                {
+                  "name": "mostrarTitulo",
+                  "label": "Mostrar título de esta entrada",
+                  "type": "boolean"
+                },
+                {
+                  "name": "mostrarDescripcion",
+                  "label": "Mostrar epígrafe",
+                  "type": "boolean"
+                },
+                {
+                  "name": "mostrarCredito",
+                  "label": "Mostrar crédito",
+                  "type": "boolean"
                 }
               ],
               "list": true
+            },
+            {
+              "name": "mostrarTitulo",
+              "label": "Mostrar título",
+              "type": "boolean"
+            },
+            {
+              "name": "menu",
+              "label": "Nombre en el menú",
+              "type": "string"
+            },
+            {
+              "name": "mostrarEnMenu",
+              "label": "Mostrar en el menú",
+              "type": "boolean"
+            },
+            {
+              "name": "etiqueta",
+              "label": "Rótulo superior",
+              "type": "string"
+            },
+            {
+              "name": "mostrarEtiqueta",
+              "label": "Mostrar rótulo superior",
+              "type": "boolean"
+            },
+            {
+              "name": "descripcion",
+              "label": "Texto de acompañamiento",
+              "type": "text"
+            },
+            {
+              "name": "mostrarDescripcion",
+              "label": "Mostrar texto de acompañamiento",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarTexto",
+              "label": "Mostrar texto",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarImagen",
+              "label": "Mostrar imagen",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarFotos",
+              "label": "Mostrar galería",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarVideo",
+              "label": "Mostrar video",
+              "type": "boolean"
             }
           ],
           "list": true

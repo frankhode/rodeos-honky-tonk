@@ -14,7 +14,7 @@ window.renderEditableSections = ({data,content,node,link,safeURL}) => {
     index=(index+step+active.length)%active.length;
     const item=active[index]; image.hidden=false; image.alt=item.alt||item.titulo||'Rodeos en vivo';
     image.src=item.imagen;
-    caption.textContent=[item.titulo,item.descripcion,item.credito].filter(Boolean).join(' · ');
+    caption.textContent=[item.mostrarTitulo===false?'':item.titulo,item.mostrarDescripcion===false?'':item.descripcion,item.mostrarCredito===false?'':item.credito].filter(Boolean).join(' · ');
     count.textContent=`${index+1} / ${active.length}`;
     previous.hidden=next.hidden=active.length<2;
   }
@@ -26,7 +26,7 @@ window.renderEditableSections = ({data,content,node,link,safeURL}) => {
   let touch;
   image.addEventListener('touchstart',e=>{touch={x:e.changedTouches[0].clientX,y:e.changedTouches[0].clientY};},{passive:true});
   image.addEventListener('touchend',e=>{if(!touch)return;const dx=e.changedTouches[0].clientX-touch.x,dy=e.changedTouches[0].clientY-touch.y;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy))show(dx<0?1:-1);touch=null;},{passive:true});
-  const photos = items => (Array.isArray(items)?items:[]).filter(p=>p&&typeof p.imagen==='string'&&p.imagen.trim());
+  const photos = items => (Array.isArray(items)?items:[]).filter(p=>p&&p.visible!==false&&typeof p.imagen==='string'&&p.imagen.trim());
   function gallery(items) {
     const all=photos(items), grid=node('div','','photo-gallery');
     grid.classList.toggle('single-photo',all.length===1);
@@ -35,7 +35,7 @@ window.renderEditableSections = ({data,content,node,link,safeURL}) => {
       button.setAttribute('aria-label','Ampliar '+(item.titulo||`foto ${i+1}`));
       img.src=item.imagen;img.alt=item.alt||item.titulo||'Rodeos en vivo';img.loading='lazy';img.decoding='async';
       button.append(img,node('span','↗','gallery-expand'));button.onclick=()=>{active=all;index=i;trigger=button;oldOverflow=document.body.style.overflow;show();dialog.showModal();document.body.style.overflow='hidden';};
-      const label=node('figcaption');label.append(node('span',String(i+1).padStart(2,'0')),node('span',item.titulo||'Rodeos en vivo'));figure.append(button,label);grid.append(figure);
+      const label=node('figcaption');label.append(node('span',String(i+1).padStart(2,'0')),node('span',item.titulo||''));label.hidden=item.mostrarTitulo===false||!item.titulo;figure.append(button,label);grid.append(figure);
     });return grid;
   }
   function video(item){
@@ -47,19 +47,19 @@ window.renderEditableSections = ({data,content,node,link,safeURL}) => {
     }else if(['instagram.com','www.instagram.com'].includes(u.hostname)){
       const path=u.pathname.match(/^\/(p|reel|tv)\/([\w-]+)\/?$/);if(path){src='https://www.instagram.com/'+path[1]+'/'+path[2]+'/embed/';instagram=true;}
     }
-    const card=node('article','','media-card'+(instagram?' instagram-card':''));card.append(node('h3',item.titulo||'Rodeos en video'));
-    if(src){const frame=node('div','',instagram?'instagram-frame':'youtube-frame'), iframe=node('iframe');iframe.src=src;iframe.title=item.titulo||'Rodeos en video';iframe.loading='lazy';iframe.referrerPolicy='strict-origin-when-cross-origin';iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.allowFullscreen=true;frame.append(iframe);card.append(frame);}
-    const original=link('Ver publicación original ↗',url);original.className='media-original';card.append(original);return card;
+    const card=node('article','','media-card'+(instagram?' instagram-card':''));card.append(node('h3',item.titulo||''));
+    if(src && item.mostrarReproductor!==false){const frame=node('div','',instagram?'instagram-frame':'youtube-frame'), iframe=node('iframe');iframe.src=src;iframe.title=item.titulo||'Rodeos en video';iframe.loading='lazy';iframe.referrerPolicy='strict-origin-when-cross-origin';iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.allowFullscreen=true;frame.append(iframe);card.append(frame);}
+    const original=link('Ver publicación original ↗',url);original.className='media-original';if(item.mostrarEnlace!==false)card.append(original);card.querySelector('h3').hidden=item.mostrarTitulo===false||!item.titulo;return card;
   }
   function section(id,title,text,label){const s=node('section','','section photo-section');s.id=id;const tag=node('div','','section-label');tag.append(node('span',label),node('span','✦'));const heading=node('div','','section-heading');heading.append(node('h2',title));if(text)heading.append(node('p',text));s.append(tag,heading);return s;}
   if(content.videos){const cards=(data.videos||[]).map(video).filter(Boolean);q('#videos .media-grid').replaceChildren(...cards);if(!cards.length)q('#videos').hidden=true;}
   if(content.fotos&&photos(data.fotos).length){const s=section('fotos',content.fotos.titulo||'Rodeos en fotos.',content.fotos.descripcion,'FOTOS');s.append(gallery(data.fotos));q('#influencias').before(s);const a=node('a','Fotos');a.href='#fotos';q('#navegacion a[href="#influencias"]').before(a);}
   (data.secciones||[]).filter(s=>s.visible!==false&&s.titulo).forEach((item,i)=>{
     const s=section('seccion-'+(i+1),item.titulo,'','RODEOS');
-    if(item.texto){const copy=node('div','','extra-copy');item.texto.split(/\n\s*\n/).forEach(p=>copy.append(node('p',p)));s.append(copy);}
-    if(item.tipo==='imagen'&&item.imagen){const img=node('img','','extra-image');img.src=item.imagen;img.alt=item.alt||item.titulo;img.loading='lazy';s.append(img);}
-    if(item.tipo==='galeria')s.append(gallery(item.fotos));
-    if(item.tipo==='video'){const card=video(item);if(card)s.append(card);}
+    if(item.texto && item.mostrarTexto!==false){const copy=node('div','','extra-copy');item.texto.split(/\n\s*\n/).forEach(p=>copy.append(node('p',p)));s.append(copy);}
+    if(item.tipo==='imagen'&&item.imagen&&item.mostrarImagen!==false){const img=node('img','','extra-image');img.src=item.imagen;img.alt=item.alt||item.titulo;img.loading='lazy';s.append(img);}
+    if(item.tipo==='galeria'&&item.mostrarFotos!==false)s.append(gallery(item.fotos));
+    if(item.tipo==='video'&&item.mostrarVideo!==false){const card=video(item);if(card)s.append(card);}
     q('#contacto').before(s);const a=node('a',item.titulo);a.href='#'+s.id;q('#navegacion').append(a);
   });
   const ids={sobre:'sobre-rodeos',videos:'videos',influencias:'influencias',fotos:'fotos',presentaciones:'presentaciones',contacto:'contacto'};
@@ -84,3 +84,4 @@ window.renderEditableSections = ({data,content,node,link,safeURL}) => {
   }
   let number=0;document.querySelectorAll('main > section.section').forEach(s=>{if(s.hidden)return;const label=s.querySelector('.section-label > span');if(label)label.textContent=String(++number).padStart(2,'0')+' / '+label.textContent.replace(/^\d+\s*\/\s*/,'');});
 };
+

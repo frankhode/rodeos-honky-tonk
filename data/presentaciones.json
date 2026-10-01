@@ -4,7 +4,27 @@
     {
       "fecha": "2024-12-14",
       "lugar": "Juijitsu",
-      "ciudad": "Tigre"
+      "ciudad": "Tigre",
+      "visible": true,
+      "mostrarFecha": true,
+      "mostrarLugar": true,
+      "mostrarCiudad": true,
+      "mostrarEnlace": true
     }
-  ]
+  ],
+  "titulo": "Presentaciones",
+  "menu": "Presentaciones",
+  "etiqueta": "EN VIVO",
+  "descripcion": "",
+  "mostrarTitulo": true,
+  "mostrarEnMenu": true,
+  "mostrarEtiqueta": true,
+  "mostrarDescripcion": true,
+  "mostrarProximas": true,
+  "mostrarTituloProximas": true,
+  "mostrarHistorial": true,
+  "mostrarTituloHistorial": true,
+  "mostrarFiltro": true,
+  "tituloProximas": "Próximas fechas",
+  "tituloHistorial": "Historial de presentaciones"
 }

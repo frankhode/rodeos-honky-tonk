@@ -4,23 +4,47 @@
   "integrantes": [
     {
       "nombre": "Valentín Palenque",
-      "instrumento": "guitarra acústica, voz líder"
+      "instrumento": "guitarra acústica, voz líder",
+      "visible": true,
+      "mostrarInstrumento": true
     },
     {
       "nombre": "Freight Fer",
-      "instrumento": "guitarra eléctrica, voz"
+      "instrumento": "guitarra eléctrica, voz",
+      "visible": true,
+      "mostrarInstrumento": true
     },
     {
       "nombre": "Franco Martino",
-      "instrumento": "lap steel, voz"
+      "instrumento": "lap steel, voz",
+      "visible": true,
+      "mostrarInstrumento": true
     },
     {
       "nombre": "Tomi Picchinino",
-      "instrumento": "violín, voz"
+      "instrumento": "violín, voz",
+      "visible": true,
+      "mostrarInstrumento": true
     },
     {
       "nombre": "Francisco Ortiz",
-      "instrumento": "contrabajo, voz"
+      "instrumento": "contrabajo, voz",
+      "visible": true,
+      "mostrarInstrumento": true
     }
-  ]
+  ],
+  "titulo": "Sobre\nRodeos.",
+  "menu": "Sobre Rodeos",
+  "etiqueta": "LA BANDA",
+  "descripcion": "",
+  "mostrarTitulo": true,
+  "mostrarEnMenu": true,
+  "mostrarEtiqueta": true,
+  "mostrarDescripcion": true,
+  "mostrarIntroduccion": true,
+  "mostrarParrafos": true,
+  "mostrarIntegrantes": true,
+  "mostrarEnlace": false,
+  "sobre": [],
+  "textoEnlace": "Influencias"
 }

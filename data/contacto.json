@@ -4,15 +4,27 @@
   "redes": [
     {
       "nombre": "Instagram",
-      "url": "https://www.instagram.com/rodeos.honkytonk/"
+      "url": "https://www.instagram.com/rodeos.honkytonk/",
+      "visible": true
     },
     {
       "nombre": "TikTok",
-      "url": "https://www.tiktok.com/@rodeos.honkytonk"
+      "url": "https://www.tiktok.com/@rodeos.honkytonk",
+      "visible": true
     },
     {
       "nombre": "YouTube",
-      "url": "https://www.youtube.com/@rodeoshonkytonk"
+      "url": "https://www.youtube.com/@rodeoshonkytonk",
+      "visible": true
     }
-  ]
+  ],
+  "titulo": "Contacto",
+  "menu": "Contacto",
+  "etiqueta": "CONTACTO",
+  "descripcion": "",
+  "mostrarTitulo": true,
+  "mostrarEnMenu": true,
+  "mostrarEtiqueta": true,
+  "mostrarDescripcion": true,
+  "mostrarEmail": true
 }

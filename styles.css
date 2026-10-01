@@ -187,3 +187,24 @@
 @media (prefers-reduced-motion:reduce) {.gallery-open img {transition:none;}}
 @media(max-width:1100px){.js .menu-toggle{display:flex;gap:14px;align-items:center;background:transparent;border:1px solid var(--line);padding:10px 13px;font-size:12px}.site-header{height:auto;flex-wrap:wrap;gap:20px}.site-header nav{width:100%;flex-direction:column;align-items:stretch;gap:0;font-size:14px;border-top:1px solid var(--line);padding-top:10px;max-height:65dvh;overflow:auto}.site-header nav a,.site-header nav .nav-contact{padding:13px 4px;border:0}.js nav{display:none}.js nav.is-open{display:flex}}
 .site-header.has-extra-sections{flex-wrap:wrap}.site-header.has-extra-sections nav{flex-wrap:wrap;justify-content:flex-end}
+
+
+/* Navegación lateral en escritorio; menú compacto en pantallas pequeñas. */
+@media(min-width:1101px){
+ html{scroll-padding-top:28px}
+ body{padding-left:238px}
+ .site-header,.site-header.has-extra-sections{position:fixed;inset:0 auto 0 0;width:238px;height:100dvh;min-height:0;padding:34px 24px;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;flex-wrap:nowrap;gap:42px;border:0;border-right:1px solid var(--line);overflow-y:auto}
+ .site-header .brand{display:flex;align-items:center;justify-content:center;flex:none;height:112px}
+ .site-header .brand img{width:190px;height:112px;max-height:112px}
+ .site-header nav,.site-header.has-extra-sections nav,.js .site-header nav{display:flex;width:100%;margin:0;flex-direction:column;align-items:stretch;justify-content:flex-start;flex-wrap:nowrap;gap:5px;font-size:14px}
+ .site-header nav a,.site-header nav .nav-contact{padding:15px 10px;border:0;border-bottom:1px solid var(--line);line-height:1.4;overflow-wrap:anywhere}
+ .site-header nav a[aria-current]{border-left:3px solid var(--red);padding-left:7px;background:var(--paper)}
+ .site-header .menu-toggle{display:none}
+ body.without-sidebar{padding-left:0}
+ .skip{left:255px}
+ .section{padding-left:6%;padding-right:6%}
+}
+.section.without-title .about-grid,.section.without-title .contact-grid{grid-template-columns:1fr}
+.section-heading h2,.about-grid h2,.contact-grid h2{overflow-wrap:anywhere}
+#about-lead{font-size:clamp(18px,1.6vw,23px);line-height:1.65}
+@media(max-width:1100px){.site-header.has-extra-sections nav{flex-wrap:nowrap;justify-content:flex-start}}

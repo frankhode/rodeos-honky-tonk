@@ -9,7 +9,13 @@
         "Hangin' Around"
       ],
       "acompanantes": [],
-      "fuenteFoto": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb070f5ccc002cf5a314902cc1"
+      "fuenteFoto": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb070f5ccc002cf5a314902cc1",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Hank Williams",
@@ -30,7 +36,13 @@
       ],
       "fuenteFoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Hank_Williams_Promotional_Photo.jpg/500px-Hank_Williams_Promotional_Photo.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "paginaFoto": "https://en.wikipedia.org/wiki/Hank_Williams",
-      "creditoFoto": "https://en.wikipedia.org/wiki/File:Hank_Williams_Promotional_Photo.jpg"
+      "creditoFoto": "https://en.wikipedia.org/wiki/File:Hank_Williams_Promotional_Photo.jpg",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Lefty Frizzell",
@@ -42,7 +54,13 @@
       "acompanantes": [],
       "fuenteFoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Lefty_Frizzell_portrait_cropped.jpg/500px-Lefty_Frizzell_portrait_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "paginaFoto": "https://en.wikipedia.org/wiki/Lefty_Frizzell",
-      "creditoFoto": "https://en.wikipedia.org/wiki/File:Lefty_Frizzell_portrait_cropped.jpg"
+      "creditoFoto": "https://en.wikipedia.org/wiki/File:Lefty_Frizzell_portrait_cropped.jpg",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Bob Wills & His Texas Playboys",
@@ -55,7 +73,13 @@
       "fuenteFoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Bob_Wills_photograph_-_Cropped.jpg/500px-Bob_Wills_photograph_-_Cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "paginaFoto": "https://en.wikipedia.org/wiki/Bob_Wills",
       "creditoFoto": "https://en.wikipedia.org/wiki/File:Bob_Wills_photograph_-_Cropped.jpg",
-      "fotoNota": "Retrato de Bob Wills"
+      "fotoNota": "Retrato de Bob Wills",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Patsy Cline",
@@ -67,7 +91,13 @@
       "acompanantes": [],
       "fuenteFoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Patsy_Cline_1960_publicity_portrait_-_cropped.jpg/500px-Patsy_Cline_1960_publicity_portrait_-_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "paginaFoto": "https://en.wikipedia.org/wiki/Patsy_Cline",
-      "creditoFoto": "https://en.wikipedia.org/wiki/File:Patsy_Cline_1960_publicity_portrait_-_cropped.jpg"
+      "creditoFoto": "https://en.wikipedia.org/wiki/File:Patsy_Cline_1960_publicity_portrait_-_cropped.jpg",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Elizabeth Cotten",
@@ -77,7 +107,13 @@
         "Freight Train"
       ],
       "acompanantes": [],
-      "fuenteFoto": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb6dcca405e2e5b458ad876b1a"
+      "fuenteFoto": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb6dcca405e2e5b458ad876b1a",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Hank Williams III",
@@ -90,7 +126,13 @@
       "fuenteFoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Hank_Williams_III_%28Hank3%29_-_Roskilde_Festival_2012.jpg/960px-Hank_Williams_III_%28Hank3%29_-_Roskilde_Festival_2012.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "paginaFoto": "https://en.wikipedia.org/wiki/Hank_Williams_III",
       "creditoFoto": "https://en.wikipedia.org/wiki/File:Hank_Williams_III_(Hank3)_-_Roskilde_Festival_2012.jpg",
-      "creditoTexto": "Foto: Bill Ebbesen · CC BY-SA 3.0. Recorte para el collage."
+      "creditoTexto": "Foto: Bill Ebbesen · CC BY-SA 3.0. Recorte para el collage.",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Johnny Cash",
@@ -103,7 +145,13 @@
       "acompanantes": [
         "The Tennessee Two"
       ],
-      "fuenteFoto": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb94a8326675bfcafb20f0a235"
+      "fuenteFoto": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5eb94a8326675bfcafb20f0a235",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Hank Snow",
@@ -115,7 +163,13 @@
       "acompanantes": [],
       "fuenteFoto": "https://upload.wikimedia.org/wikipedia/commons/1/17/Hanksnowpromoimage.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled",
       "paginaFoto": "https://en.wikipedia.org/wiki/Hank_Snow",
-      "creditoFoto": "https://en.wikipedia.org/wiki/File:Hanksnowpromoimage.jpg"
+      "creditoFoto": "https://en.wikipedia.org/wiki/File:Hanksnowpromoimage.jpg",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Eddy Arnold",
@@ -127,7 +181,13 @@
       "acompanantes": [],
       "fuenteFoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Eddie_Arnold_1969.JPG/500px-Eddie_Arnold_1969.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "paginaFoto": "https://en.wikipedia.org/wiki/Eddy_Arnold",
-      "creditoFoto": "https://en.wikipedia.org/wiki/File:Eddie_Arnold_1969.JPG"
+      "creditoFoto": "https://en.wikipedia.org/wiki/File:Eddie_Arnold_1969.JPG",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Webb Pierce",
@@ -137,7 +197,13 @@
         "In the Jailhouse Now"
       ],
       "acompanantes": [],
-      "fuenteFoto": "https://image-cdn-ak.spotifycdn.com/image/ab6761610000e5ebe969c89e7fc8fe42e37c5efd"
+      "fuenteFoto": "https://image-cdn-ak.spotifycdn.com/image/ab6761610000e5ebe969c89e7fc8fe42e37c5efd",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Jean Shepard",
@@ -149,7 +215,13 @@
       "acompanantes": [],
       "fuenteFoto": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Jean_Shepard--Billboard--1967.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled",
       "paginaFoto": "https://en.wikipedia.org/wiki/Jean_Shepard",
-      "creditoFoto": "https://en.wikipedia.org/wiki/File:Jean_Shepard--Billboard--1967.jpg"
+      "creditoFoto": "https://en.wikipedia.org/wiki/File:Jean_Shepard--Billboard--1967.jpg",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Hank Thompson",
@@ -163,7 +235,13 @@
       ],
       "fuenteFoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Hank_Thompson_1966.JPG/500px-Hank_Thompson_1966.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "paginaFoto": "https://en.wikipedia.org/wiki/Hank_Thompson_(musician)",
-      "creditoFoto": "https://en.wikipedia.org/wiki/File:Hank_Thompson_1966.JPG"
+      "creditoFoto": "https://en.wikipedia.org/wiki/File:Hank_Thompson_1966.JPG",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Red Foley",
@@ -175,7 +253,13 @@
       "acompanantes": [],
       "fuenteFoto": "https://upload.wikimedia.org/wikipedia/commons/0/08/Red_Foley_Billboard_2.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled",
       "paginaFoto": "https://en.wikipedia.org/wiki/Red_Foley",
-      "creditoFoto": "https://en.wikipedia.org/wiki/File:Red_Foley_Billboard_2.jpg"
+      "creditoFoto": "https://en.wikipedia.org/wiki/File:Red_Foley_Billboard_2.jpg",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Jimmy Wakely",
@@ -187,7 +271,13 @@
       "acompanantes": [],
       "fuenteFoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Jimmy_Wakely_in_I%27m_from_Arkansas.jpg/500px-Jimmy_Wakely_in_I%27m_from_Arkansas.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "paginaFoto": "https://en.wikipedia.org/wiki/Jimmy_Wakely",
-      "creditoFoto": "https://en.wikipedia.org/wiki/File:Jimmy_Wakely_in_I'm_from_Arkansas.jpg"
+      "creditoFoto": "https://en.wikipedia.org/wiki/File:Jimmy_Wakely_in_I'm_from_Arkansas.jpg",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     },
     {
       "nombre": "Santo & Johnny",
@@ -197,7 +287,23 @@
         "Sleepwalk"
       ],
       "acompanantes": [],
-      "fuenteFoto": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5ebf063f27815823c4e9ce4973e"
+      "fuenteFoto": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000e5ebf063f27815823c4e9ce4973e",
+      "visible": true,
+      "mostrarImagen": true,
+      "mostrarNombre": true,
+      "mostrarEnlace": true,
+      "mostrarNota": true,
+      "mostrarAcompanantes": true
     }
-  ]
+  ],
+  "titulo": "Nuestras\ninfluencias.",
+  "menu": "Influencias",
+  "etiqueta": "NUESTRAS RAÍCES",
+  "descripcion": "",
+  "mostrarTitulo": true,
+  "mostrarEnMenu": true,
+  "mostrarEtiqueta": true,
+  "mostrarDescripcion": true,
+  "mostrarArtistas": true,
+  "mostrarCreditos": true
 }

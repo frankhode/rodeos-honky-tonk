@@ -4,26 +4,55 @@
     {
       "imagen": "/rodeos-honky-tonk/assets/banda.jpg",
       "titulo": "San Pedro Country Music Festival 2026",
-      "alt": "San Pedro Country Music Festival 2026"
+      "alt": "San Pedro Country Music Festival 2026",
+      "visible": true,
+      "mostrarTitulo": true,
+      "mostrarDescripcion": true,
+      "mostrarCredito": true
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/img0860.jpg",
       "titulo": "San Pedro Country Music Festival 2026",
-      "alt": "San Pedro Country Music Festival 2026"
+      "alt": "San Pedro Country Music Festival 2026",
+      "visible": true,
+      "mostrarTitulo": true,
+      "mostrarDescripcion": true,
+      "mostrarCredito": true
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/img0870.jpg",
       "titulo": "San Pedro Country Music Festival 2026",
-      "alt": "San Pedro Country Music Festival 2026"
+      "alt": "San Pedro Country Music Festival 2026",
+      "visible": true,
+      "mostrarTitulo": true,
+      "mostrarDescripcion": true,
+      "mostrarCredito": true
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/img0857.jpg",
-      "titulo": "San Pedro Country Music Festival 2026"
+      "titulo": "San Pedro Country Music Festival 2026",
+      "visible": true,
+      "mostrarTitulo": true,
+      "mostrarDescripcion": true,
+      "mostrarCredito": true
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/img0875.jpg",
       "titulo": "San Pedro Country Music Festival 2026",
-      "alt": "San Pedro Country Music Festival 2026"
+      "alt": "San Pedro Country Music Festival 2026",
+      "visible": true,
+      "mostrarTitulo": true,
+      "mostrarDescripcion": true,
+      "mostrarCredito": true
     }
-  ]
+  ],
+  "titulo": "Fotos",
+  "menu": "Fotos",
+  "etiqueta": "FOTOS",
+  "descripcion": "",
+  "mostrarTitulo": true,
+  "mostrarEnMenu": true,
+  "mostrarEtiqueta": true,
+  "mostrarDescripcion": true,
+  "mostrarFotos": true
 }
