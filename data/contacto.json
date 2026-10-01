@@ -6,7 +6,7 @@
   "mostrarEnMenu": true,
   "etiqueta": "Contacto",
   "mostrarEtiqueta": true,
-  "mostrarDescripcion": true,
+  "mostrarDescripcion": false,
   "email": "rodeoshonkytonk@gmail.com",
   "redes": [
     {
