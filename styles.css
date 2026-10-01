@@ -208,3 +208,67 @@
 .section-heading h2,.about-grid h2,.contact-grid h2{overflow-wrap:anywhere}
 #about-lead{font-size:clamp(18px,1.6vw,23px);line-height:1.65}
 @media(max-width:1100px){.site-header.has-extra-sections nav{flex-wrap:nowrap;justify-content:flex-start}}
+
+/* Miniaturas como contactos fotográficos: tamaño acotado y visor a demanda. */
+.photo-gallery {
+  grid-template-columns:repeat(auto-fill,minmax(160px,210px));
+  gap:22px 18px;
+  align-items:start;
+  justify-content:start;
+}
+.gallery-card,.gallery-card:nth-child(3n+1) {
+  grid-column:auto;
+  padding:7px 7px 11px;
+  background:var(--cream);
+  border:1px solid rgba(36,40,32,.14);
+  box-shadow:0 3px 8px rgba(36,40,32,.07);
+}
+.gallery-open {
+  padding:15px 7px;
+  background:#242820;
+  border-radius:1px;
+}
+.gallery-open::before,.gallery-open::after {
+  content:"";
+  position:absolute;
+  left:8px;right:8px;height:5px;
+  background:repeating-linear-gradient(90deg,var(--paper) 0 7px,transparent 7px 16px);
+  pointer-events:none;
+}
+.gallery-open::before {top:5px}
+.gallery-open::after {bottom:5px}
+.gallery-open img,.gallery-card:nth-child(3n+1) img {
+  aspect-ratio:3/2;
+  width:100%;
+  object-fit:cover;
+}
+.gallery-expand {
+  width:26px;height:26px;
+  right:12px;bottom:20px;
+  font-size:17px;
+  background:rgba(250,245,231,.94);
+}
+.gallery-card figcaption {
+  padding:10px 3px 0;
+  gap:9px;
+  font-size:11px;
+  line-height:1.45;
+}
+.gallery-card figcaption span:first-child {
+  flex:none;
+  font-variant-numeric:tabular-nums;
+  font-size:10px;
+  padding-top:1px;
+}
+.gallery-card figcaption span:last-child {overflow-wrap:anywhere}
+.gallery-open:focus-visible {outline-offset:3px}
+@media(max-width:640px) {
+  .photo-gallery {grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}
+  .gallery-card,.gallery-card:nth-child(3n+1) {padding:5px 5px 9px}
+  .gallery-card figcaption {font-size:10px;gap:6px}
+  .photo-gallery.single-photo {grid-template-columns:minmax(0,210px)}
+}
+@media(max-width:340px) {
+  .photo-gallery {gap:12px 8px}
+  .gallery-card figcaption {flex-direction:column;gap:2px}
+}

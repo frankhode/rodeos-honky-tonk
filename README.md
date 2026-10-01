@@ -15,7 +15,7 @@ La configuración del panel está en `.pages.yml`. Los cambios se guardan en Git
 
 En **Fotos**, agregar una entrada por imagen. En **Foto**, subir o elegir un archivo. Completar título, descripción accesible y, si corresponde, epígrafe y crédito. Reordenar las entradas para cambiar su orden. Quitar una entrada la retira de la galería, sin necesidad de borrar el archivo original. Guardar al terminar.
 
-La primera foto ocupa el ancho de la galería; las siguientes se organizan en pares. En celular se apilan. Al tocar una foto se abre un visor con flechas, teclado (←/→, Escape) y deslizamiento táctil. Con una sola imagen no aparecen flechas. Sin imágenes, la sección se oculta. No hay reproducción automática ni cargas públicas de visitantes.
+Las fotos aparecen como pequeñas tarjetas con marco de película, de hasta 210 píxeles de ancho. En celular se organizan en dos columnas. Al tocar una foto se abre un visor con flechas, teclado (←/→, Escape) y deslizamiento táctil. Con una sola imagen no aparecen flechas. Sin imágenes, la sección se oculta. No hay reproducción automática ni cargas públicas de visitantes.
 
 ### Otros contenidos
 
