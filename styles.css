@@ -70,3 +70,90 @@
   .site-header .brand{height:62px}
   .site-header .brand img{width:106px;height:62px}
 }
+
+
+/* Ajuste cabecera y hero solicitado: logo más protagonista, banner sin bloque negro. */
+.site-header{
+  min-height:88px;
+  height:auto;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+.site-header .brand{
+  display:flex;
+  align-items:center;
+  height:72px;
+  flex:0 0 auto;
+}
+.site-header .brand img{
+  display:block;
+  width:154px;
+  height:86px;
+  max-width:none;
+  max-height:none;
+  object-fit:contain;
+  object-position:center;
+  mix-blend-mode:normal;
+}
+.site-header nav{margin-left:auto}
+
+.hero{
+  min-height:0;
+  display:block;
+  background:transparent;
+  color:inherit;
+  overflow:hidden;
+}
+.hero-art{
+  position:relative;
+  inset:auto;
+  width:100%;
+  aspect-ratio:1916/821;
+  flex:none;
+}
+.hero-art:after{display:none !important}
+.hero-photo{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.hero-content,
+.hero-bottom,
+.photo-note{
+  display:none !important;
+}
+
+.ticker{
+  gap:48px;
+  justify-content:center;
+}
+.ticker span{flex:0 0 auto}
+
+@media(max-width:900px){
+  .site-header{
+    min-height:86px;
+    padding-top:8px;
+    padding-bottom:8px;
+  }
+  .site-header .brand{height:72px}
+  .site-header .brand img{
+    width:148px;
+    height:82px;
+  }
+}
+@media(max-width:640px){
+  .site-header{
+    min-height:86px;
+    padding-top:8px;
+    padding-bottom:8px;
+  }
+  .site-header .brand{height:72px}
+  .site-header .brand img{
+    width:145px;
+    height:80px;
+  }
+  .hero-art{aspect-ratio:1916/821}
+  .hero-photo{object-fit:cover}
+}
