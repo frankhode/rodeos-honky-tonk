@@ -1,30 +1,29 @@
 {
   "visible": true,
-  "email": "Rodeoshonkytonk@gmail.com",
-  "redes": [
-    {
-      "nombre": "Instagram",
-      "url": "https://www.instagram.com/rodeos.honkytonk/",
-      "visible": true
-    },
-    {
-      "nombre": "TikTok",
-      "url": "https://www.tiktok.com/@rodeos.honkytonk",
-      "visible": true
-    },
-    {
-      "nombre": "YouTube",
-      "url": "https://www.youtube.com/@rodeoshonkytonk",
-      "visible": true
-    }
-  ],
   "titulo": "Contacto",
-  "menu": "Contacto",
-  "etiqueta": "CONTACTO",
-  "descripcion": "",
   "mostrarTitulo": true,
+  "menu": "Contacto",
   "mostrarEnMenu": true,
+  "etiqueta": "CONTACTO",
   "mostrarEtiqueta": true,
   "mostrarDescripcion": true,
+  "email": "rodeoshonkytonk@gmail.com",
+  "redes": [
+    {
+      "visible": true,
+      "nombre": "Instagram",
+      "url": "https://www.instagram.com/rodeos.honkytonk/"
+    },
+    {
+      "visible": true,
+      "nombre": "TikTok",
+      "url": "https://www.tiktok.com/@rodeos.honkytonk"
+    },
+    {
+      "visible": true,
+      "nombre": "YouTube",
+      "url": "https://www.youtube.com/@rodeoshonkytonk"
+    }
+  ],
   "mostrarEmail": true
 }
