@@ -4,7 +4,7 @@ window.RODEOS = {
   foto: "assets/banner-rodeos.jpg", // Ejemplo: "assets/banda.jpg" (foto horizontal)
   fotoAlt: "Rodeos Honky-Tonk",
   fotoPosicion: "center", // Ejemplo: "center 35%" para ajustar el recorte
-  logo: "assets/logo.jpg", // Ejemplo: "assets/logo.png" (preferentemente fondo transparente)
+  logo: "assets/logo-transparent.svg", // Ejemplo: "assets/logo.png" (preferentemente fondo transparente)
   lema: "Honky-tonk.\nA nuestra manera.",
   sobreTitulo: "Un punto de encuentro.\nUna forma de hacer música.",
   sobre: ["Estamos preparando este espacio para compartir nuestra historia, presentar a los integrantes y contar qué nos reúne alrededor del honky-tonk."],
