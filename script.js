@@ -27,7 +27,35 @@
   lines(q('#about-lead'), data.sobreTitulo);
   if (Array.isArray(data.sobre) && data.sobre.length) q('#about-text').replaceChildren(...data.sobre.map((p) => node('p', p)));
   if (Array.isArray(data.integrantes) && data.integrantes.length) { q('#members').hidden = false; q('#members').replaceChildren(...data.integrantes.map((m) => { const li = node('li'); li.append(node('strong', m.nombre), node('span', m.instrumento)); return li; })); }
-  if (Array.isArray(data.influencias) && data.influencias.length) q('#influence-list').replaceChildren(...data.influencias.map((item, i) => { const article = node('article', '', 'influence-item'); const h = node('h3'); const url = safeURL(item.enlace); h.append(url ? link(item.nombre + ' ↗', url) : document.createTextNode(item.nombre || '')); article.append(node('span', String(i + 1).padStart(2, '0'), 'influence-number'), h, node('p', item.texto)); return article; }));
+  if (Array.isArray(data.influencias) && data.influencias.length) {
+    const list = q('#influence-list');
+    list.classList.toggle('artist-collage', data.influencias.some((item) => item.imagen));
+    list.replaceChildren(...data.influencias.map((item, i) => {
+      const article = node('article', '', item.imagen ? 'artist-card' : 'influence-item');
+      const url = safeURL(item.enlace);
+      if (item.imagen) {
+        const photoLink = url ? link('', url) : node('div');
+        photoLink.className = 'artist-photo-link';
+        if (url) photoLink.setAttribute('aria-label', 'Escuchar a ' + item.nombre + ' en Spotify (abre otra pestaña)');
+        const img = document.createElement('img');
+        img.src = item.imagen; img.alt = item.nombre; img.loading = 'lazy'; img.decoding = 'async'; img.width = 640; img.height = 640;
+        img.style.objectPosition = item.posicion || 'center top';
+        photoLink.append(img); article.append(photoLink);
+        const caption = node('div', '', 'artist-caption');
+        const h = node('h3'); h.append(url ? link(item.nombre + ' ↗', url) : document.createTextNode(item.nombre || ''));
+        caption.append(h);
+        if (item.fotoNota) caption.append(node('p', item.fotoNota, 'artist-accompanists'));
+        if (item.acompanantes && item.acompanantes.length) caption.append(node('p', 'Con ' + item.acompanantes.join(' · '), 'artist-accompanists'));
+        if (item.canciones && item.canciones.length) article.title = item.canciones.join(' · ');
+        article.append(caption);
+      } else {
+        const h = node('h3'); h.append(url ? link(item.nombre + ' ↗', url) : document.createTextNode(item.nombre || ''));
+        article.append(node('span', String(i + 1).padStart(2, '0'), 'influence-number'), h, node('p', item.texto));
+      }
+      return article;
+    }));
+  }
+
   // Fechas ISO: comparación en horario argentino, sin el desfase de new Date('YYYY-MM-DD').
   const today = new Intl.DateTimeFormat('sv-SE', { timeZone: 'America/Argentina/Buenos_Aires', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
   const validDate = (value) => { if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return false; const d = new Date(value + 'T12:00:00Z'); return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === value; };
@@ -46,3 +74,4 @@
   if (footerLinks.length) q('#social-links').replaceChildren(...footerLinks);
   q('#year').textContent = new Intl.DateTimeFormat('en', { year: 'numeric', timeZone: 'America/Argentina/Buenos_Aires' }).format(new Date());
 })();
+
