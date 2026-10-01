@@ -1,4 +1,10 @@
 {
   "visible": true,
-  "presentaciones": []
+  "presentaciones": [
+    {
+      "fecha": "2024-12-14",
+      "lugar": "Juijitsu",
+      "ciudad": "Tigre"
+    }
+  ]
 }
