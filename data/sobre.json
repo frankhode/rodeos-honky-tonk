@@ -1,4 +1,26 @@
 {
   "visible": true,
-  "sobreTitulo": "Rodeos es una banda de country vintage que revive el sonido del Honky Tonk clásico de fines de los años 40. El quinteto —Valentín Palenque (guitarra acústica, voz líder), Freight Fer (guitarra eléctrica, voz), Franco Martino (lap steel, voz) y Tomi Picchinino (violín, voz) y Francisco Ortiz (contrabajo, voz)— se formó a fines de 2024, reuniendo músicos con trayectorias en el country, blues, rockabilly y bluegrass.\n\nCon instrumentos y arreglos fieles a la época, Rodeos busca rescatar el espíritu del country previo a 1955, cuando el género aún no había sido transformado por el rock. Inspirados por Hank Williams o Bob Wills, Rodeos hacemos subgéneros como honky-tonk, western swing y rockabilly.\n\nRodeos tiene un historial de más de 40 presentaciones en vivo como artista principal o invitado en conciertos, festivales, eventos y fiestas privadas\n"
+  "sobreTitulo": "Rodeos es una banda de country vintage que revive el sonido del Honky Tonk clásico de fines de los años 40. El quinteto se formó a fines de 2024, reuniendo músicos con trayectorias en el country, blues, rockabilly y bluegrass.\nCon instrumentos y arreglos fieles a la época, Rodeos busca rescatar el espíritu del country previo a 1955, cuando el género aún no había sido transformado por el rock. Inspirados por Hank Williams o Bob Wills, Rodeos hacemos subgéneros como honky-tonk, western swing y rockabilly.\nRodeos tiene un historial de más de 40 presentaciones en vivo como artista principal o invitado en conciertos, festivales, eventos y fiestas privadas\n",
+  "integrantes": [
+    {
+      "nombre": "Valentín Palenque",
+      "instrumento": "guitarra acústica, voz líder"
+    },
+    {
+      "nombre": "Freight Fer",
+      "instrumento": "guitarra eléctrica, voz"
+    },
+    {
+      "nombre": "Franco Martino",
+      "instrumento": "lap steel, voz"
+    },
+    {
+      "nombre": "Tomi Picchinino",
+      "instrumento": "violín, voz"
+    },
+    {
+      "nombre": "Francisco Ortiz",
+      "instrumento": "contrabajo, voz"
+    }
+  ]
 }
