@@ -23,6 +23,11 @@
       "visible": true,
       "nombre": "YouTube",
       "url": "https://www.youtube.com/@rodeoshonkytonk"
+    },
+    {
+      "visible": false,
+      "nombre": "Facebook",
+      "url": "https://www.facebook.com/profile.php?id=61582355368118"
     }
   ],
   "mostrarEmail": true
