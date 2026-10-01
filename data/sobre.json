@@ -1,7 +1,7 @@
 {
-  "visible": false,
+  "visible": true,
   "titulo": "Sobre\nRodeos.",
-  "mostrarTitulo": true,
+  "mostrarTitulo": false,
   "menu": "Sobre Rodeos",
   "mostrarEnMenu": true,
   "etiqueta": "LA BANDA",
