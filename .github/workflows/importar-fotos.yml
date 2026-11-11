@@ -1,0 +1,35 @@
+name: Importar fotos como borradores
+on:
+  push:
+    branches: [main]
+    paths: [data/fotos-pendientes.json]
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: Contexto opcional de Pages CMS
+        required: false
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: importar-fotos
+  cancel-in-progress: false
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Crear entradas ocultas
+        run: node scripts/importar-fotos.mjs
+      - name: Guardar la galería y vaciar la bandeja
+        run: |
+          git add data/fotos.json data/fotos-pendientes.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Agregar fotos pendientes como entradas ocultas'
+          # Never force or rebase over concurrent CMS edits. On conflict the
+          # complete batch stays pending remotely and can be retried safely.
+          git push origin HEAD:main

@@ -169,6 +169,12 @@
           "type": "object",
           "fields": [
             {
+              "name": "foto",
+              "label": "Retrato vertical",
+              "type": "image",
+              "description": "Subí una foto por integrante. Se muestra en proporción 3:4."
+            },
+            {
               "name": "visible",
               "label": "Mostrar esta entrada",
               "type": "boolean"
@@ -182,27 +188,6 @@
               "name": "instrumento",
               "label": "Instrumento",
               "type": "string"
-            },
-            {
-              "name": "mostrarInstrumento",
-              "label": "Mostrar instrumento",
-              "type": "boolean"
-            },
-            {
-              "name": "foto",
-              "label": "Retrato vertical",
-              "type": "image",
-              "description": "Subí una foto por integrante. Se muestra en proporción 3:4."
-            },
-            {
-              "name": "fotoAlt",
-              "label": "Descripción del retrato",
-              "type": "string"
-            },
-            {
-              "name": "ocultarFoto",
-              "label": "Ocultar retrato (sin borrarlo)",
-              "type": "boolean"
             },
             {
               "name": "encuadreFoto",
@@ -224,9 +209,29 @@
                   }
                 ]
               }
+            },
+            {
+              "name": "fotoAlt",
+              "label": "Descripción del retrato",
+              "type": "string"
+            },
+            {
+              "name": "ocultarFoto",
+              "label": "Ocultar retrato (sin borrarlo)",
+              "type": "boolean"
+            },
+            {
+              "name": "mostrarInstrumento",
+              "label": "Mostrar instrumento",
+              "type": "boolean"
             }
           ],
-          "list": true
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{nombre}"
+            }
+          }
         },
         {
           "name": "mostrarIntroduccion",
@@ -657,6 +662,40 @@
       ]
     },
     {
+      "name": "carga-fotos",
+      "label": "Fotos — carga masiva",
+      "type": "file",
+      "path": "data/fotos-pendientes.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "imagenes",
+          "label": "Fotos para agregar",
+          "type": "image",
+          "description": "Seleccioná varias imágenes y guardá. Se crearán entradas ocultas en Fotos. Esperá a que termine la importación y recargá Fotos antes de editar. No repitas una carga mientras la anterior esté pendiente.",
+          "options": {
+            "multiple": {
+              "max": 100
+            },
+            "unique": true
+          }
+        }
+      ],
+      "actions": [
+        {
+          "name": "importar-fotos",
+          "label": "Reintentar importación",
+          "workflow": "importar-fotos.yml",
+          "ref": "main",
+          "confirm": {
+            "title": "Reintentar carga guardada",
+            "message": "Guardá primero. Se procesarán las fotos pendientes sin duplicar las ya importadas.",
+            "button": "Importar"
+          }
+        }
+      ]
+    },
+    {
       "name": "fotos",
       "label": "Fotos",
       "type": "file",
@@ -714,24 +753,19 @@
           "type": "object",
           "fields": [
             {
-              "name": "visible",
-              "label": "Mostrar esta entrada",
-              "type": "boolean"
-            },
-            {
               "name": "imagen",
               "label": "Foto",
               "type": "image",
               "required": true
             },
             {
-              "name": "titulo",
-              "label": "Título",
-              "type": "string"
+              "name": "visible",
+              "label": "Mostrar esta entrada",
+              "type": "boolean"
             },
             {
-              "name": "alt",
-              "label": "Descripción de la imagen (accesibilidad)",
+              "name": "titulo",
+              "label": "Título",
               "type": "string"
             },
             {
@@ -742,6 +776,11 @@
             {
               "name": "credito",
               "label": "Crédito de la foto",
+              "type": "string"
+            },
+            {
+              "name": "alt",
+              "label": "Descripción de la imagen (accesibilidad)",
               "type": "string"
             },
             {
@@ -760,7 +799,12 @@
               "type": "boolean"
             }
           ],
-          "list": true
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "Foto {index} — {titulo}"
+            }
+          }
         },
         {
           "name": "mostrarFotos",
