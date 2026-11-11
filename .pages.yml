@@ -187,6 +187,43 @@
               "name": "mostrarInstrumento",
               "label": "Mostrar instrumento",
               "type": "boolean"
+            },
+            {
+              "name": "foto",
+              "label": "Retrato vertical",
+              "type": "image",
+              "description": "Subí una foto por integrante. Se muestra en proporción 3:4."
+            },
+            {
+              "name": "fotoAlt",
+              "label": "Descripción del retrato",
+              "type": "string"
+            },
+            {
+              "name": "ocultarFoto",
+              "label": "Ocultar retrato (sin borrarlo)",
+              "type": "boolean"
+            },
+            {
+              "name": "encuadreFoto",
+              "label": "Encuadre del retrato",
+              "type": "select",
+              "options": {
+                "values": [
+                  {
+                    "name": "top",
+                    "label": "Priorizar parte superior (rostro)"
+                  },
+                  {
+                    "name": "center",
+                    "label": "Centrado"
+                  },
+                  {
+                    "name": "bottom",
+                    "label": "Priorizar parte inferior"
+                  }
+                ]
+              }
             }
           ],
           "list": true

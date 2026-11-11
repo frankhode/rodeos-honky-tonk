@@ -35,7 +35,17 @@
   if (data.lema) { const heroLine = q('.hero-line'); if (heroLine) { const parts = data.lema.split('\n'); heroLine.replaceChildren(document.createTextNode(parts[0])); if (parts.length > 1) heroLine.append(document.createElement('br'), node('em', parts.slice(1).join(' '))); } }
   q('#about-lead').textContent=''; lines(q('#about-lead'), data.sobreTitulo);
   if (Array.isArray(data.sobre)) q('#about-text').replaceChildren(...data.sobre.filter(p=>typeof p==='string'||p.visible!==false).map((p) => node('p', typeof p==='string'?p:p.texto)));
-  if (Array.isArray(data.integrantes) && data.integrantes.length) { q('#members').hidden = false; q('#members').replaceChildren(...data.integrantes.map((m) => { const li = node('li'); li.append(node('strong', m.nombre), node('span', m.instrumento)); return li; })); }
+  if (Array.isArray(data.integrantes) && data.integrantes.length) { q('#members').hidden = false; q('#members').replaceChildren(...data.integrantes.map((m) => { const li = node('li', '', 'member-card');
+      if (typeof m.foto === 'string' && m.foto.trim() && m.ocultarFoto !== true) {
+        const frame = node('div', '', 'member-portrait');
+        const img = node('img');
+        img.alt = m.fotoAlt || ('Retrato de ' + (m.nombre || 'integrante de Rodeos'));
+        img.loading = 'lazy'; img.decoding = 'async'; img.width = 450; img.height = 600;
+        img.style.objectPosition = 'center ' + (['top','center','bottom'].includes(m.encuadreFoto) ? m.encuadreFoto : 'top');
+        img.addEventListener('error', () => { frame.hidden = true; });
+        img.src = m.foto; frame.append(img); li.append(frame);
+      }
+      li.append(node('strong', m.nombre), node('span', m.instrumento)); return li; })); }
   if (Array.isArray(data.influencias)) {
     const list = q('#influence-list');
     list.classList.toggle('artist-collage', data.influencias.some((item) => item.imagen));
