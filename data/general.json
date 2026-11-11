@@ -1,6 +1,8 @@
 {
   "logo": "/rodeos-honky-tonk/assets/logo-transparent.svg",
   "foto": "/rodeos-honky-tonk/assets/ls3a2053-2.webp",
+  "fotoProporcion": "3/1",
+  "fotoPosicion": "center",
   "fotoAlt": "Rodeos Honky-Tonk",
   "mostrarLogo": true,
   "mostrarMenu": true,
