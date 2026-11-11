@@ -3,7 +3,7 @@
   "foto": "/rodeos-honky-tonk/assets/ls3a2840.webp",
   "fotoProporcion": "16/9",
   "fotoPosicion": "center top",
-  "fotoAjuste": "contain",
+  "fotoAjuste": "cover",
   "fotoAlt": "Rodeos Honky-Tonk",
   "mostrarLogo": true,
   "mostrarMenu": true,
