@@ -3,16 +3,33 @@
   document.documentElement.classList.add('js');
   const data = { ...(window.RODEOS || {}) };
   const content = {};
+  function renderBanner(settings) {
+    const hero = document.querySelector('#inicio');
+    const art = document.querySelector('#hero-art');
+    if (!hero || !art) return;
+    if (!settings.foto || settings.mostrarBanner === false) { hero.hidden = true; return; }
+    art.style.aspectRatio = ['1916/821','16/9','3/1'].includes(settings.fotoProporcion) ? settings.fotoProporcion : '1916/821';
+    const img = new Image();
+    img.alt = settings.fotoAlt || 'Rodeos Honky-Tonk';
+    img.className = 'hero-photo';
+    img.style.objectPosition = settings.fotoPosicion || 'center';
+    img.style.objectFit = settings.fotoAjuste === 'contain' ? 'contain' : 'cover';
+    img.fetchPriority = 'high';
+    img.onload = () => { art.replaceChildren(img); art.classList.add('has-photo'); art.removeAttribute('aria-hidden'); };
+    img.onerror = () => { art.hidden = true; };
+    img.src = settings.foto;
+  }
   await Promise.all(['general','sobre','influencias','presentaciones','videos','fotos','contacto','secciones'].map(async name => {
     try {
       const response = await fetch('data/' + name + '.json', {cache:'no-cache', signal:AbortSignal.timeout(10000)});
       if (!response.ok) throw new Error(response.status);
       content[name] = await response.json();
+      if (name === 'general') renderBanner(content[name]);
       const {visible, ...values} = content[name];
       const empty={general:{logo:'',foto:'',fotoAlt:''},sobre:{sobreTitulo:'',sobre:[],integrantes:[]},influencias:{influencias:[]},presentaciones:{presentaciones:[]},videos:{videos:[]},fotos:{fotos:[]},contacto:{email:'',redes:[]},secciones:{secciones:[]}};
       Object.assign(data,empty[name],values);
       if(name==='sobre') { data.sobre=values.sobre||[]; data.integrantes=values.integrantes||[]; data.sobreTitulo=values.sobreTitulo||''; }
-    } catch (error) { console.warn('No se pudo cargar la sección ' + name, error); }
+    } catch (error) { if (name === 'general') document.querySelector('#hero-art').hidden = true; console.warn('No se pudo cargar la sección ' + name, error); }
   }));
   ['integrantes','influencias','presentaciones','redes','videos','fotos','secciones'].forEach(key=>{if(Array.isArray(data[key]))data[key]=data[key].filter(item=>item.visible!==false);});
   const q = (s) => document.querySelector(s);
@@ -25,12 +42,6 @@
   menu.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); nav.classList.toggle('is-open', open); });
   nav.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); } });
-  if (data.foto) {
-    const ratio = ['1916/821','16/9','3/1'].includes(data.fotoProporcion) ? data.fotoProporcion : '1916/821';
-    q('#hero-art').style.aspectRatio = ratio;
-    const img = new Image(); img.alt = data.fotoAlt || 'Rodeos Honky-Tonk'; img.className = 'hero-photo'; img.style.objectPosition = data.fotoPosicion || 'center'; img.style.objectFit = data.fotoAjuste === 'contain' ? 'contain' : 'cover'; img.fetchPriority = 'high';
-    img.onload = () => { const heroArt = q('#hero-art'); if (heroArt) { heroArt.replaceChildren(img); heroArt.classList.add('has-photo'); heroArt.removeAttribute('aria-hidden'); } const photoNote = q('#photo-note'); if (photoNote) photoNote.hidden = true; }; img.src = data.foto;
-  }
   if (data.logo) {
     const logo = new Image(); logo.onload = () => { document.querySelectorAll('.brand').forEach((b) => { const img = logo.cloneNode(); img.alt = 'Rodeos Honky-Tonk'; b.replaceChildren(img); }); }; logo.src = data.logo;
   }
