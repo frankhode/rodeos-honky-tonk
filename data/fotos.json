@@ -51,6 +51,38 @@
       "mostrarTitulo": true,
       "mostrarDescripcion": true,
       "mostrarCredito": true
+    },
+    {
+      "visible": true,
+      "imagen": "/rodeos-honky-tonk/assets/ls3a2834-2.webp",
+      "titulo": "Rodeos",
+      "mostrarTitulo": false,
+      "mostrarDescripcion": false,
+      "mostrarCredito": false
+    },
+    {
+      "visible": true,
+      "imagen": "/rodeos-honky-tonk/assets/ls3a2640.webp",
+      "titulo": "Rodeos",
+      "mostrarTitulo": false,
+      "mostrarDescripcion": false,
+      "mostrarCredito": false
+    },
+    {
+      "visible": true,
+      "imagen": "/rodeos-honky-tonk/assets/ls3a2067.webp",
+      "titulo": "Rodeos",
+      "mostrarTitulo": false,
+      "mostrarDescripcion": false,
+      "mostrarCredito": false
+    },
+    {
+      "visible": true,
+      "imagen": "/rodeos-honky-tonk/assets/ls3a2057.webp",
+      "titulo": "Rodeos",
+      "mostrarTitulo": false,
+      "mostrarDescripcion": false,
+      "mostrarCredito": false
     }
   ],
   "mostrarFotos": true
