@@ -97,6 +97,7 @@
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/ls3a2284.webp",
+      "posicionMiniatura": "center top",
       "visible": true,
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
@@ -104,6 +105,7 @@
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/ls3a2323.webp",
+      "posicionMiniatura": "center top",
       "visible": true,
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
@@ -111,6 +113,7 @@
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/ls3a2372.webp",
+      "posicionMiniatura": "center top",
       "visible": true,
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
@@ -118,13 +121,7 @@
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/ls3a2469.webp",
-      "visible": true,
-      "mostrarTitulo": false,
-      "mostrarDescripcion": false,
-      "mostrarCredito": false
-    },
-    {
-      "imagen": "/rodeos-honky-tonk/assets/ls3a2488.webp",
+      "posicionMiniatura": "center top",
       "visible": true,
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
