@@ -33,6 +33,9 @@ window.renderEditableSections = ({data,content,node,link,safeURL}) => {
     all.forEach((item,i)=>{
       const figure=node('figure','','gallery-card'), button=node('button','','gallery-open'), img=node('img');button.type='button';
       button.setAttribute('aria-label','Ampliar '+(item.titulo||`foto ${i+1}`));
+      img.style.objectPosition=item.posicionMiniatura||'center';
+      img.style.objectFit=item.ajusteMiniatura==='contain'?'contain':'cover';
+      img.classList.toggle('uncropped',item.ajusteMiniatura==='contain');
       img.src=item.imagen;img.alt=item.alt||item.titulo||'Rodeos en vivo';img.loading='lazy';img.decoding='async';
       button.append(img,node('span','↗','gallery-expand'));button.onclick=()=>{active=all;index=i;trigger=button;oldOverflow=document.body.style.overflow;show();dialog.showModal();document.body.style.overflow='hidden';};
       const label=node('figcaption');label.append(node('span',String(i+1).padStart(2,'0')),node('span',item.titulo||''));label.hidden=item.mostrarTitulo===false||!item.titulo;figure.append(button,label);grid.append(figure);

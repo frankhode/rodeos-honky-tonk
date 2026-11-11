@@ -31,6 +31,92 @@
           "type": "image"
         },
         {
+          "name": "fotoProporcion",
+          "label": "Proporción del banner",
+          "type": "select",
+          "description": "Si queda vacío se mantiene 1916 × 821 px. Prepará la imagen con las medidas indicadas para evitar recortes. La proporción se conserva también en celular.",
+          "options": {
+            "values": [
+              {
+                "name": "1916/821",
+                "label": "Panorámico actual — 1916 × 821 px"
+              },
+              {
+                "name": "16/9",
+                "label": "16:9 — 1920 × 1080 px"
+              },
+              {
+                "name": "3/1",
+                "label": "3:1 — 2400 × 800 px"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fotoPosicion",
+          "label": "Encuadre del banner",
+          "type": "select",
+          "description": "Elegí qué parte priorizar cuando la foto se recorta. Vacío: centrada.",
+          "options": {
+            "values": [
+              {
+                "name": "left top",
+                "label": "Arriba a la izquierda"
+              },
+              {
+                "name": "center top",
+                "label": "Arriba al centro (rostros)"
+              },
+              {
+                "name": "right top",
+                "label": "Arriba a la derecha"
+              },
+              {
+                "name": "left center",
+                "label": "Centro a la izquierda"
+              },
+              {
+                "name": "center",
+                "label": "Centrada"
+              },
+              {
+                "name": "right center",
+                "label": "Centro a la derecha"
+              },
+              {
+                "name": "left bottom",
+                "label": "Abajo a la izquierda"
+              },
+              {
+                "name": "center bottom",
+                "label": "Abajo al centro"
+              },
+              {
+                "name": "right bottom",
+                "label": "Abajo a la derecha"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fotoAjuste",
+          "label": "Ajuste del banner",
+          "type": "select",
+          "description": "Completa conserva toda la foto y puede dejar márgenes. Vacío: llenar el banner.",
+          "options": {
+            "values": [
+              {
+                "name": "cover",
+                "label": "Llenar el banner (recortar)"
+              },
+              {
+                "name": "contain",
+                "label": "Foto completa (sin recortar)"
+              }
+            ]
+          }
+        },
+        {
           "name": "fotoAlt",
           "label": "Descripción del banner",
           "type": "string"
@@ -759,6 +845,70 @@
               "required": true
             },
             {
+              "name": "posicionMiniatura",
+              "label": "Encuadre de la miniatura",
+              "type": "select",
+              "description": "Para fotos verticales probá Arriba al centro. Solo cambia la miniatura, no la foto ampliada. Vacío: centrada.",
+              "options": {
+                "values": [
+                  {
+                    "name": "left top",
+                    "label": "Arriba a la izquierda"
+                  },
+                  {
+                    "name": "center top",
+                    "label": "Arriba al centro (rostros)"
+                  },
+                  {
+                    "name": "right top",
+                    "label": "Arriba a la derecha"
+                  },
+                  {
+                    "name": "left center",
+                    "label": "Centro a la izquierda"
+                  },
+                  {
+                    "name": "center",
+                    "label": "Centrada"
+                  },
+                  {
+                    "name": "right center",
+                    "label": "Centro a la derecha"
+                  },
+                  {
+                    "name": "left bottom",
+                    "label": "Abajo a la izquierda"
+                  },
+                  {
+                    "name": "center bottom",
+                    "label": "Abajo al centro"
+                  },
+                  {
+                    "name": "right bottom",
+                    "label": "Abajo a la derecha"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "ajusteMiniatura",
+              "label": "Ajuste de la miniatura",
+              "type": "select",
+              "description": "Las tarjetas mantienen proporción 3:2. Foto completa permite ver todo el retrato con márgenes laterales.",
+              "options": {
+                "values": [
+                  {
+                    "name": "cover",
+                    "label": "Llenar la miniatura (recortar)"
+                  },
+                  {
+                    "name": "contain",
+                    "label": "Foto completa (sin recortar)"
+                  }
+                ]
+              }
+            },
+            {
               "name": "visible",
               "label": "Mostrar esta entrada",
               "type": "boolean"
@@ -983,6 +1133,70 @@
                   "label": "Foto",
                   "type": "image",
                   "required": true
+                },
+                {
+                  "name": "posicionMiniatura",
+                  "label": "Encuadre de la miniatura",
+                  "type": "select",
+                  "description": "Para fotos verticales probá Arriba al centro. Solo cambia la miniatura, no la foto ampliada. Vacío: centrada.",
+                  "options": {
+                    "values": [
+                      {
+                        "name": "left top",
+                        "label": "Arriba a la izquierda"
+                      },
+                      {
+                        "name": "center top",
+                        "label": "Arriba al centro (rostros)"
+                      },
+                      {
+                        "name": "right top",
+                        "label": "Arriba a la derecha"
+                      },
+                      {
+                        "name": "left center",
+                        "label": "Centro a la izquierda"
+                      },
+                      {
+                        "name": "center",
+                        "label": "Centrada"
+                      },
+                      {
+                        "name": "right center",
+                        "label": "Centro a la derecha"
+                      },
+                      {
+                        "name": "left bottom",
+                        "label": "Abajo a la izquierda"
+                      },
+                      {
+                        "name": "center bottom",
+                        "label": "Abajo al centro"
+                      },
+                      {
+                        "name": "right bottom",
+                        "label": "Abajo a la derecha"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "ajusteMiniatura",
+                  "label": "Ajuste de la miniatura",
+                  "type": "select",
+                  "description": "Las tarjetas mantienen proporción 3:2. Foto completa permite ver todo el retrato con márgenes laterales.",
+                  "options": {
+                    "values": [
+                      {
+                        "name": "cover",
+                        "label": "Llenar la miniatura (recortar)"
+                      },
+                      {
+                        "name": "contain",
+                        "label": "Foto completa (sin recortar)"
+                      }
+                    ]
+                  }
                 },
                 {
                   "name": "titulo",

@@ -26,7 +26,9 @@
   nav.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); } });
   if (data.foto) {
-    const img = new Image(); img.alt = data.fotoAlt || 'Rodeos Honky-Tonk'; img.className = 'hero-photo'; img.style.objectPosition = data.fotoPosicion || 'center'; img.fetchPriority = 'high';
+    const ratio = ['1916/821','16/9','3/1'].includes(data.fotoProporcion) ? data.fotoProporcion : '1916/821';
+    q('#hero-art').style.aspectRatio = ratio;
+    const img = new Image(); img.alt = data.fotoAlt || 'Rodeos Honky-Tonk'; img.className = 'hero-photo'; img.style.objectPosition = data.fotoPosicion || 'center'; img.style.objectFit = data.fotoAjuste === 'contain' ? 'contain' : 'cover'; img.fetchPriority = 'high';
     img.onload = () => { const heroArt = q('#hero-art'); if (heroArt) { heroArt.replaceChildren(img); heroArt.classList.add('has-photo'); heroArt.removeAttribute('aria-hidden'); } const photoNote = q('#photo-note'); if (photoNote) photoNote.hidden = true; }; img.src = data.foto;
   }
   if (data.logo) {

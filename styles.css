@@ -304,3 +304,9 @@
   .members strong {font-size:15px}
   .member-portrait {margin-bottom:11px}
 }
+
+/* Marcos de imagen estables, con encuadre editable desde Pages CMS. */
+.hero-art { background:var(--ink); }
+.hero-art .hero-photo { position:absolute; inset:0; }
+.gallery-open img,.gallery-card:nth-child(3n+1) img { height:auto; }
+.gallery-open img.uncropped { transform:none; }
