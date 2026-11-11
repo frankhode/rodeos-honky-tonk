@@ -15,7 +15,8 @@
       "instrumento": "guitarra acústica, voz líder",
       "mostrarInstrumento": true,
       "foto": "/rodeos-honky-tonk/assets/ls3a2222.webp",
-      "ocultarFoto": false
+      "ocultarFoto": false,
+      "encuadreFoto": "bottom"
     },
     {
       "visible": true,
@@ -31,7 +32,8 @@
       "instrumento": "lap steel, voz",
       "mostrarInstrumento": true,
       "foto": "/rodeos-honky-tonk/assets/ls3a2447.webp",
-      "ocultarFoto": false
+      "ocultarFoto": false,
+      "encuadreFoto": "bottom"
     },
     {
       "visible": true,
@@ -39,7 +41,8 @@
       "instrumento": "violín, voz",
       "mostrarInstrumento": true,
       "foto": "/rodeos-honky-tonk/assets/ls3a2336.webp",
-      "ocultarFoto": false
+      "ocultarFoto": false,
+      "encuadreFoto": "bottom"
     },
     {
       "visible": true,
@@ -47,7 +50,8 @@
       "instrumento": "contrabajo, voz",
       "mostrarInstrumento": true,
       "foto": "/rodeos-honky-tonk/assets/ls3a2269.webp",
-      "ocultarFoto": false
+      "ocultarFoto": false,
+      "encuadreFoto": "bottom"
     }
   ],
   "mostrarIntroduccion": true,
