@@ -9,8 +9,8 @@
   "mostrarDescripcion": false,
   "fotos": [
     {
-      "visible": true,
       "imagen": "/rodeos-honky-tonk/assets/banda.jpg",
+      "visible": true,
       "titulo": "San Pedro Country Music Festival 2026",
       "alt": "San Pedro Country Music Festival 2026",
       "mostrarTitulo": true,
@@ -18,8 +18,8 @@
       "mostrarCredito": true
     },
     {
-      "visible": true,
       "imagen": "/rodeos-honky-tonk/assets/img0860.jpg",
+      "visible": true,
       "titulo": "San Pedro Country Music Festival 2026",
       "alt": "San Pedro Country Music Festival 2026",
       "mostrarTitulo": true,
@@ -27,8 +27,8 @@
       "mostrarCredito": true
     },
     {
-      "visible": true,
       "imagen": "/rodeos-honky-tonk/assets/img0870.jpg",
+      "visible": true,
       "titulo": "San Pedro Country Music Festival 2026",
       "alt": "San Pedro Country Music Festival 2026",
       "mostrarTitulo": true,
@@ -36,16 +36,16 @@
       "mostrarCredito": true
     },
     {
-      "visible": true,
       "imagen": "/rodeos-honky-tonk/assets/img0857.jpg",
+      "visible": true,
       "titulo": "San Pedro Country Music Festival 2026",
       "mostrarTitulo": true,
       "mostrarDescripcion": true,
       "mostrarCredito": true
     },
     {
-      "visible": true,
       "imagen": "/rodeos-honky-tonk/assets/img0875.jpg",
+      "visible": true,
       "titulo": "San Pedro Country Music Festival 2026",
       "alt": "San Pedro Country Music Festival 2026",
       "mostrarTitulo": true,
@@ -53,32 +53,35 @@
       "mostrarCredito": true
     },
     {
-      "visible": true,
       "imagen": "/rodeos-honky-tonk/assets/ls3a2834-2.webp",
+      "posicionMiniatura": "center",
+      "visible": true,
       "titulo": "Rodeos",
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
       "mostrarCredito": false
     },
     {
-      "visible": true,
       "imagen": "/rodeos-honky-tonk/assets/ls3a2640.webp",
+      "visible": true,
       "titulo": "Rodeos",
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
       "mostrarCredito": false
     },
     {
-      "visible": true,
       "imagen": "/rodeos-honky-tonk/assets/ls3a2067.webp",
+      "posicionMiniatura": "center top",
+      "visible": true,
       "titulo": "Rodeos",
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
       "mostrarCredito": false
     },
     {
-      "visible": true,
       "imagen": "/rodeos-honky-tonk/assets/ls3a2057.webp",
+      "posicionMiniatura": "left top",
+      "visible": true,
       "titulo": "Rodeos",
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
@@ -86,22 +89,16 @@
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/ls3a2091.webp",
-      "visible": false,
-      "titulo": "",
-      "alt": "",
-      "descripcion": "",
-      "credito": "",
+      "posicionMiniatura": "left top",
+      "visible": true,
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
       "mostrarCredito": false
     },
     {
       "imagen": "/rodeos-honky-tonk/assets/ls3a2057-1.webp",
+      "posicionMiniatura": "left top",
       "visible": false,
-      "titulo": "",
-      "alt": "",
-      "descripcion": "",
-      "credito": "",
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
       "mostrarCredito": false
