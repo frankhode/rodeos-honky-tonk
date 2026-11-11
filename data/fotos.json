@@ -83,6 +83,28 @@
       "mostrarTitulo": false,
       "mostrarDescripcion": false,
       "mostrarCredito": false
+    },
+    {
+      "imagen": "/rodeos-honky-tonk/assets/ls3a2091.webp",
+      "visible": false,
+      "titulo": "",
+      "alt": "",
+      "descripcion": "",
+      "credito": "",
+      "mostrarTitulo": false,
+      "mostrarDescripcion": false,
+      "mostrarCredito": false
+    },
+    {
+      "imagen": "/rodeos-honky-tonk/assets/ls3a2057-1.webp",
+      "visible": false,
+      "titulo": "",
+      "alt": "",
+      "descripcion": "",
+      "credito": "",
+      "mostrarTitulo": false,
+      "mostrarDescripcion": false,
+      "mostrarCredito": false
     }
   ],
   "mostrarFotos": true
