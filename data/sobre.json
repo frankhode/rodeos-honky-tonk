@@ -13,31 +13,41 @@
       "visible": true,
       "nombre": "Valentín Palenque",
       "instrumento": "guitarra acústica, voz líder",
-      "mostrarInstrumento": true
+      "mostrarInstrumento": true,
+      "foto": "/rodeos-honky-tonk/assets/ls3a2222.webp",
+      "ocultarFoto": false
     },
     {
       "visible": true,
       "nombre": "Freight Fer",
       "instrumento": "guitarra eléctrica, voz",
-      "mostrarInstrumento": true
+      "mostrarInstrumento": true,
+      "foto": "/rodeos-honky-tonk/assets/ls3a2776.webp",
+      "ocultarFoto": false
     },
     {
       "visible": true,
       "nombre": "Franco Martino",
       "instrumento": "lap steel, voz",
-      "mostrarInstrumento": true
+      "mostrarInstrumento": true,
+      "foto": "/rodeos-honky-tonk/assets/ls3a2447.webp",
+      "ocultarFoto": false
     },
     {
       "visible": true,
       "nombre": "Tomi Picchinino",
       "instrumento": "violín, voz",
-      "mostrarInstrumento": true
+      "mostrarInstrumento": true,
+      "foto": "/rodeos-honky-tonk/assets/ls3a2336.webp",
+      "ocultarFoto": false
     },
     {
       "visible": true,
       "nombre": "Francisco Ortiz",
       "instrumento": "contrabajo, voz",
-      "mostrarInstrumento": true
+      "mostrarInstrumento": true,
+      "foto": "/rodeos-honky-tonk/assets/ls3a2269.webp",
+      "ocultarFoto": false
     }
   ],
   "mostrarIntroduccion": true,
